@@ -1,0 +1,82 @@
+@import "tailwindcss/index.css";
+
+@theme {
+  --font-playfair: var(--font-playfair);
+  --font-montserrat: var(--font-montserrat);
+  --font-cairo: var(--font-cairo);
+}
+
+:root {
+  /* Light Theme Defaults */
+  --bg-primary: #eee3df;
+  --accent-primary: #82503E;
+  --text-primary: #2a0a0a;
+  --header-bg: #eee3df;
+  --border-color: #8b6f5d;
+  --mega-menu-bg: #ffffff;
+  --mega-accent: #8b6f5d;
+  --subtitle-fr: #82503E;
+  --font-cairo: "Cairo", sans-serif;
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  /* Dark Theme */
+  --bg-primary: #000000;
+  --accent-primary: #d4af37;
+  --text-primary: #ffffff;
+  --subtitle-fr: #82503E;
+  --header-bg: #0a0a0a;
+  --border-color: #d4af37;
+  --mega-menu-bg: #111111;
+  --mega-accent: #d4af37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-cairo);
+  transition: var(--transition-smooth);
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes scan-v {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 200%;
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: 0%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+.animate-scan {
+  animation: scan 4s linear infinite;
+}
