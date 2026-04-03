@@ -1560,7 +1560,7 @@ export default function Home() {
                   </div>
                   <div className="w-full flex flex-col items-start text-start">
                     <a href="mailto:contact@sanadidari.com" className="block text-white/90 text-lg md:text-xl hover:text-[#D4AF37] transition-colors mb-2 font-light" dir="ltr">contact@sanadidari.com</a>
-                    <a href="tel:+212675835787" className="block text-white font-bold text-2xl md:text-3xl hover:text-[#D4AF37] transition-colors tracking-wider" dir="ltr">+212 675 835 787</a>
+
                   </div>
                 </motion.div>
               </div>

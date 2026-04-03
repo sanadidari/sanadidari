@@ -42,7 +42,7 @@ export default function Footer() {
             title: lang === "ar" ? "اتصل بنا" : lang === "fr" ? "CONTACT" : "CONTACT US",
             address: lang === "ar" ? "شارع الحسن الثاني، زنقة أكنسوس، عمارة رقم 1، شقة رقم 2 - الرباط - المغرب" : "Avenue HASSAN II, Rue Akensous, Immeuble n°1, Appartement n°2 - RABAT - Maroc",
             email: "contact@sanadidari.com",
-            phone: "+212 675 835 787",
+
             website: "www.sanadidari.com"
         }
     };
@@ -182,12 +182,7 @@ export default function Footer() {
                                     </span>
                                     {data.contact.email}
                                 </a>
-                                <a href={`tel:${data.contact.phone.replace(/\s+/g, '')}`} className={`text-sm text-gray-400 hover:text-[#D4AF37] transition-colors flex items-center gap-3 ${lang === 'ar' ? 'flex-row-reverse' : ''}`}>
-                                    <span className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-[#D4AF37]/70">
-                                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                                    </span>
-                                    <span dir="ltr">{data.contact.phone}</span>
-                                </a>
+
                                 <a href={`https://${data.contact.website}`} target="_blank" rel="noopener noreferrer" className={`text-sm text-gray-400 hover:text-[#D4AF37] transition-colors flex items-center gap-3 ${lang === 'ar' ? 'flex-row-reverse' : ''}`}>
                                     <span className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-[#D4AF37]/70">
                                         <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
