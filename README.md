@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Samir Chatwiti
+### Senior Engineering Manager | Software Architect | Founder @ Sanandidari
 
-## Getting Started
+Experienced Senior Engineering Manager with over 10 years of experience in architecting and delivering high-impact software solutions. Specialized in **Legal Tech**, **Governance**, and **Zero-Trust Architectures**. 
 
-First, run the development server:
+Passionately driving digital sovereignty through the **WITI Ecosystem** (Wealth, Institutional, and Technical Integrity).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Expertise & Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend & Mobile**: Next.js, React, Flutter, Tailwind CSS.
+- - **Backend & API**: Laravel (PHP), Node.js, REST/GraphQL APIs.
+  - - **Security & Integrity**: Zero-Trust, Hashing, Cryptography, Blockchain concepts.
+    - - **DevOps & Cloud**: Vercel, Docker, CI/CD, Git.
+      - - **Domain Focus**: Legal Information Systems, Digital Governance, Institutional Integrity.
+       
+        - ---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+        ## Key Projects
 
-## Learn More
+        ### [QRPruf](https://github.com/sanadidari/qrpruf)
+        A Zero-Trust authentication and document verification system using advanced hashing and QR technology. Ensuring technical integrity for sensitive institutions.
 
-To learn more about Next.js, take a look at the following resources:
+        ### [Governance](https://github.com/sanadidari/governance)
+        A robust platform for institutional governance and protocol management, built with Laravel. Focuses on transparency and workflow automation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+        ### [Nour Mobile](https://github.com/sanadidari/nour-mobile)
+        The mobile extension of the Sanandidari ecosystem, built with Flutter, providing seamless access to governance and verification tools on the go.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+        ---
 
-## Deploy on Vercel
+        ## GitHub Stats
+        ![Samir's GitHub stats](https://github-readme-stats.vercel.app/api?username=sanadidari&show_icons=true&theme=radical)
+        ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sanadidari&layout=compact&theme=radical)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+        ---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+        ## Connect with Me
+        - **LinkedIn**: [linkedin.com/in/samir-chatwiti](https://www.linkedin.com/in/samir-chatwiti)
+        - - **Website**: [sanadidari.com](https://sanadidari.com)
+          - - **Email**: [contact@sanadidari.com](mailto:contact@sanadidari.com)
+           
+            - *"Architecting the future of digital trust through institutional integrity."*
+            - 
