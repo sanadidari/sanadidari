@@ -1,4 +1,4 @@
-"use client";
+w"use client";
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useSpring, useMotionValue, useTransform } from "framer-motion";
@@ -577,7 +577,7 @@ export default function Home() {
                           {
                             tAr: 'الشركاء القانونيين', tFr: 'Partenaires Juridiques', tEn: 'Legal Partners',
                             dAr: 'تعاون وثيق مع مكاتب المحاماة والموثقين لضمان أعلى مستويات الحماية والامتثال القانوني الشامل.',
-                            dFr: 'Collaboration étroite avec les cabinets d\'avocats et notaires pour garantir protection et conformité.' ,
+                            dFr: 'Collaboration étroite avec les cabinets d\'avocats et notaires pour garantir protection et conformité.',
                             dEn: 'Close collaboration with law firms and notaries to ensure total protection and compliance.'
                           },
                           {
