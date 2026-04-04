@@ -47,41 +47,41 @@ export default function WitiHubPage() {
                 />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="max-w-7xl mx-auto px-10 md:px-16 lg:px-24 relative z-10">
                 
                 {/* Back to Home Navigation */}
                 <motion.a 
                     href="/"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    whileHover={{ x: -5 }}
-                    className="group flex items-center gap-3 mb-20 text-[var(--text-primary)]/40 hover:text-[var(--accent-primary)] transition-colors text-[0.6rem] font-black uppercase tracking-[0.4em]"
+                    whileHover={{ x: -10 }}
+                    className="group flex items-center gap-4 mb-16 text-[var(--text-primary)]/40 hover:text-[var(--accent-primary)] transition-colors text-[0.65rem] font-black uppercase tracking-[0.4em]"
                 >
-                    <div className="w-8 h-8 rounded-full border border-[var(--text-primary)]/10 flex items-center justify-center group-hover:border-[var(--accent-primary)]/40 group-hover:bg-[var(--accent-primary)]/5 transition-all">
-                        <span className={`${lang === 'ar' ? 'rotate-180' : ''}`}>←</span>
+                    <div className="w-10 h-10 rounded-full border border-[var(--text-primary)]/10 flex items-center justify-center group-hover:border-[var(--accent-primary)]/40 group-hover:bg-[var(--accent-primary)]/5 transition-all shadow-sm">
+                        <span className={`text-lg font-light ${lang === 'ar' ? 'rotate-180' : ''}`}>←</span>
                     </div>
-                    {lang === 'ar' ? 'العودة للرئيسية' : 'BACK TO HOME'}
+                    {lang === 'ar' ? 'العودة للرئيسية' : 'BACK TO THE PORTAL'}
                 </motion.a>
 
                 {/* Header Section */}
-                <div className="text-center mb-32 space-y-6">
+                <div className="text-center mb-24 space-y-8">
                     <motion.div 
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         className="space-y-4"
                     >
-                        <h1 className="text-7xl lg:text-9xl font-black text-[var(--text-primary)] uppercase tracking-tighter leading-none">
+                        <h1 className="text-5xl lg:text-7xl font-black text-[var(--text-primary)] uppercase tracking-tighter leading-[0.9]">
                             {lang === 'ar' ? 'إيكوسيستم' : 'WITI'}<br/>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-primary)] to-[#82503E]">
                                 {lang === 'ar' ? 'ويتي المتكامل' : 'ECOSYSTEM'}
                             </span>
                         </h1>
-                        <div className="flex items-center justify-center gap-4">
-                            <div className="h-[1px] bg-[var(--accent-primary)]/30 w-12" />
-                            <p className="text-[var(--text-primary)]/50 font-black uppercase tracking-[0.5em] text-[0.6rem]">
+                        <div className="flex items-center justify-center gap-6 pt-4">
+                            <div className="h-[1px] bg-[var(--accent-primary)]/20 w-16" />
+                            <p className="text-[var(--text-primary)]/40 font-black uppercase tracking-[0.6em] text-[0.6rem]">
                                 {lang === 'ar' ? 'الابتكار • الأمان • التميز' : 'INNOVATION • SECURITY • EXCELLENCE'}
                             </p>
-                            <div className="h-[1px] bg-[var(--accent-primary)]/30 w-12" />
+                            <div className="h-[1px] bg-[var(--accent-primary)]/20 w-16" />
                         </div>
                     </motion.div>
                 </div>

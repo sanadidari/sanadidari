@@ -35,8 +35,8 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
     };
 
     return (
-        <div className={`min-h-screen py-24 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[#F9F5F3]'} transition-colors duration-700`}>
-            <div className="max-w-7xl mx-auto px-6">
+        <div className={`min-h-screen py-24 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[var(--bg-primary)]'} transition-colors duration-700`}>
+            <div className="max-w-[1440px] mx-auto px-10 sm:px-16 md:px-24">
                 
                 {/* Elevated Back Link */}
                 <motion.button 
@@ -56,38 +56,49 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                 <div className={`flex flex-col lg:flex-row gap-16 items-start ${lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
                     
                     {/* Content Section */}
-                    <div className="lg:w-1/2 space-y-8">
-                        <div className="space-y-4">
+                    <div className="lg:w-1/2 space-y-10">
+                        <div className="space-y-6">
                             <motion.div 
                                 initial={{ scaleX: 0 }}
                                 animate={{ scaleX: 1 }}
-                                className={`h-1 bg-[var(--accent-primary)] w-24 ${lang === 'ar' ? 'ml-auto' : ''}`}
+                                className={`h-1.5 bg-[var(--accent-primary)] w-20 ${lang === 'ar' ? 'ml-auto' : ''}`}
                             />
-                            <h1 className="text-5xl lg:text-7xl font-black text-[var(--text-primary)] uppercase tracking-tighter leading-none">
+                            <h1 className="text-4xl lg:text-5xl font-black text-[var(--text-primary)] uppercase tracking-tight leading-tight">
                                 {getTitle()}
                             </h1>
-                            <p className="text-xl text-[var(--text-primary)]/80 leading-relaxed font-medium">
+                            <p className="text-lg text-[var(--text-primary)]/80 leading-relaxed font-medium">
                                 {getDesc()}
                             </p>
                         </div>
 
-                        {/* Tech Stack Bubbles */}
+                        {/* Structured Tech Architecture Display */}
                         {techStack && (
-                            <div className="flex flex-wrap gap-2 pt-4">
-                                {techStack.map((tech, idx) => (
-                                    <span key={idx} className="px-4 py-2 rounded-full border border-[var(--accent-primary)]/30 text-[var(--accent-primary)] text-[10px] font-black uppercase tracking-widest bg-[var(--accent-primary)]/5">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
+                          <div className="overflow-hidden rounded-3xl border border-[var(--accent-primary)]/20 bg-white/5 backdrop-blur-sm shadow-2xl">
+                              <div className="bg-[var(--accent-primary)]/10 px-8 py-4 border-b border-[var(--accent-primary)]/20">
+                                  <h3 className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-[var(--accent-primary)]">
+                                      {lang === 'ar' ? 'بنيان التكنولوجيا' : lang === 'fr' ? 'ARCHITECTURE TECHNIQUE' : 'TECHNICAL STACK'}
+                                  </h3>
+                              </div>
+                              <div className="p-8">
+                                  <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                                      {techStack.map((tech, idx) => (
+                                          <div key={idx} className="flex flex-col gap-1.5">
+                                              <div className="text-[10px] text-[var(--text-primary)]/30 font-bold uppercase tracking-widest">Module 0{idx + 1}</div>
+                                              <div className="text-sm font-black text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">{tech}</div>
+                                              <div className="w-6 h-[1.5px] bg-[var(--accent-primary)]/40" />
+                                          </div>
+                                      ))}
+                                  </div>
+                              </div>
+                          </div>
                         )}
 
                         {features && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8 border-t border-[var(--accent-primary)]/10">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                                 {features.map((feature, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 group hover:border-[var(--accent-primary)]/30 transition-all">
-                                        <div className="w-2 h-2 rounded-full bg-[var(--accent-primary)] shadow-[0_0_10px_rgba(212,175,55,0.5)] group-hover:scale-150 transition-transform" />
-                                        <span className="text-sm font-bold text-[var(--text-primary)]">
+                                    <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 group hover:border-[var(--accent-primary)]/30 transition-all shadow-lg">
+                                        <div className="w-3 h-3 rounded-full bg-[var(--accent-primary)] shadow-[0_0_15px_rgba(212,175,55,0.5)] group-hover:scale-125 transition-transform" />
+                                        <span className="text-[0.85rem] font-bold text-[var(--text-primary)] leading-tight">
                                             {lang === 'ar' ? feature.ar : lang === 'fr' ? feature.fr : feature.en}
                                         </span>
                                     </div>
