@@ -3,6 +3,7 @@ import { Cairo, Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 import Chatbot from "@/components/Chatbot";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { PremiumProvider } from "@/context/PremiumContext";
 
 const cairo = Cairo({
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="ar">
       <body className={`${cairo.variable} ${playfair.variable} ${montserrat.variable} font-cairo antialiased flex flex-col min-h-screen`}>
         <PremiumProvider>
+          <Header />
           <div className="flex-grow">
             {children}
           </div>

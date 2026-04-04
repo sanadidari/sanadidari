@@ -23,62 +23,131 @@ export default function WitiHubPage() {
     const { lang, theme } = usePremium();
 
     return (
-        <div className={`min-h-screen py-32 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[#F9F5F3]'} transition-colors duration-700`}>
-            <div className="max-w-7xl mx-auto px-6">
+        <div className={`min-h-screen py-32 relative overflow-hidden ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[#F9F5F3]'} transition-colors duration-700`}>
+            
+            {/* Animated Mesh Gradients */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <motion.div 
+                    animate={{ 
+                        scale: [1, 1.2, 1],
+                        rotate: [0, 90, 0],
+                        x: [0, 100, 0]
+                    }} 
+                    transition={{ duration: 20, repeat: Infinity }}
+                    className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-[var(--accent-primary)]/10 blur-[150px] rounded-full" 
+                />
+                <motion.div 
+                    animate={{ 
+                        scale: [1.2, 1, 1.2],
+                        rotate: [0, -90, 0],
+                        x: [0, -100, 0]
+                    }} 
+                    transition={{ duration: 25, repeat: Infinity }}
+                    className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-blue-500/10 blur-[150px] rounded-full" 
+                />
+            </div>
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
                 
-                {/* Header */}
-                <div className="text-center mb-24 space-y-4">
-                    <motion.h1 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-6xl lg:text-8xl font-black text-[var(--text-primary)] uppercase tracking-tighter"
-                    >
-                        {lang === 'ar' ? 'إيكوسيستم ويتي' : 'WITI ECOSYSTEM'}
-                    </motion.h1>
+                {/* Back to Home Navigation */}
+                <motion.a 
+                    href="/"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    whileHover={{ x: -5 }}
+                    className="group flex items-center gap-3 mb-20 text-[var(--text-primary)]/40 hover:text-[var(--accent-primary)] transition-colors text-[0.6rem] font-black uppercase tracking-[0.4em]"
+                >
+                    <div className="w-8 h-8 rounded-full border border-[var(--text-primary)]/10 flex items-center justify-center group-hover:border-[var(--accent-primary)]/40 group-hover:bg-[var(--accent-primary)]/5 transition-all">
+                        <span className={`${lang === 'ar' ? 'rotate-180' : ''}`}>←</span>
+                    </div>
+                    {lang === 'ar' ? 'العودة للرئيسية' : 'BACK TO HOME'}
+                </motion.a>
+
+                {/* Header Section */}
+                <div className="text-center mb-32 space-y-6">
                     <motion.div 
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: 1 }}
-                        className="h-1 bg-[var(--accent-primary)] w-32 mx-auto"
-                    />
-                    <p className="text-[var(--text-primary)]/60 font-bold uppercase tracking-[0.3em] text-xs">
-                        {lang === 'ar' ? 'الابتكار • الأمان • التميز' : 'INNOVATION • SECURITY • EXCELLENCE'}
-                    </p>
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="space-y-4"
+                    >
+                        <h1 className="text-7xl lg:text-9xl font-black text-[var(--text-primary)] uppercase tracking-tighter leading-none">
+                            {lang === 'ar' ? 'إيكوسيستم' : 'WITI'}<br/>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-primary)] to-[#82503E]">
+                                {lang === 'ar' ? 'ويتي المتكامل' : 'ECOSYSTEM'}
+                            </span>
+                        </h1>
+                        <div className="flex items-center justify-center gap-4">
+                            <div className="h-[1px] bg-[var(--accent-primary)]/30 w-12" />
+                            <p className="text-[var(--text-primary)]/50 font-black uppercase tracking-[0.5em] text-[0.6rem]">
+                                {lang === 'ar' ? 'الابتكار • الأمان • التميز' : 'INNOVATION • SECURITY • EXCELLENCE'}
+                            </p>
+                            <div className="h-[1px] bg-[var(--accent-primary)]/30 w-12" />
+                        </div>
+                    </motion.div>
                 </div>
 
-                {/* Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {/* Applications Modern Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {apps.map((app, idx) => (
                         <motion.a
                             key={app.id}
                             href={app.link}
                             target={app.external ? "_blank" : "_self"}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.05 }}
-                            whileHover={{ y: -10, scale: 1.02 }}
-                            className="relative group p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-[var(--accent-primary)]/50 transition-all duration-300 overflow-hidden flex flex-col items-center justify-center text-center backdrop-blur-md"
+                            transition={{ delay: idx * 0.05, duration: 0.6 }}
+                            whileHover={{ y: -15, scale: 1.02 }}
+                            className="relative group p-10 rounded-[3rem] bg-white/5 border border-white/10 hover:border-[var(--accent-primary)]/40 transition-all duration-500 overflow-hidden flex flex-col items-center justify-center text-center backdrop-blur-xl shadow-2xl"
                         >
-                            {/* App Icon Circle */}
-                            <div className={`w-24 h-24 rounded-full ${app.color} bg-opacity-20 flex items-center justify-center text-5xl mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500`}>
+                            {/* Animated Background Pulse */}
+                            <div className={`absolute inset-0 ${app.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700`} />
+                            
+                            {/* Icon Mastery */}
+                            <div className={`relative w-28 h-28 rounded-full ${app.color} bg-opacity-10 flex items-center justify-center text-5xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-700 shadow-inner overflow-hidden`}>
+                                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 {app.icon}
                             </div>
                             
-                            <h3 className="text-xl font-black text-[var(--text-primary)] mb-2 uppercase tracking-tight">
-                                {app.title}
-                            </h3>
-                            <div className="w-8 h-[2px] bg-[var(--accent-primary)]/20 mb-4 group-hover:w-16 transition-all duration-500" />
-                            
-                            <span className="text-[10px] font-black text-[var(--accent-primary)] tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                                {lang === 'ar' ? 'استكشاف الآن' : 'EXPLORE NOW'}
-                            </span>
-
-                            {/* Glow Effect on Hover */}
-                            <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--accent-primary)] transform translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                            <div className="space-y-4">
+                                <h3 className="text-2xl font-black text-[var(--text-primary)] uppercase tracking-tight leading-tight">
+                                    {app.title}
+                                </h3>
+                                <div className="w-10 h-[2px] bg-[var(--accent-primary)]/20 mx-auto group-hover:w-24 group-hover:bg-[var(--accent-primary)] transition-all duration-700" />
+                                
+                                <div className="flex flex-col items-center gap-1 opacity-40 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                    <span className="text-[9px] font-black text-[var(--accent-primary)] tracking-[0.3em] uppercase">
+                                        {lang === 'ar' ? 'استكشاف الحل' : 'EXPLORE SOLUTION'}
+                                    </span>
+                                    <div className="h-[1px] w-4 bg-[var(--accent-primary)]" />
+                                </div>
+                            </div>
                         </motion.a>
                     ))}
                 </div>
             </div>
+
+            {/* Floating Particles for Texture */}
+            {[...Array(20)].map((_, i) => (
+                <motion.div
+                    key={i}
+                    animate={{
+                        y: [-20, 20],
+                        opacity: [0.1, 0.3, 0.1],
+                        scale: [1, 1.5, 1]
+                    }}
+                    transition={{
+                        duration: 5 + Math.random() * 10,
+                        repeat: Infinity,
+                        delay: Math.random() * 5
+                    }}
+                    className="absolute w-1 h-1 bg-[var(--accent-primary)] rounded-full blur-[1px] z-0"
+                    style={{
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`
+                    }}
+                />
+            ))}
         </div>
     );
 }

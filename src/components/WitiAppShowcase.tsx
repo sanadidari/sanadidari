@@ -1,9 +1,11 @@
 "use client";
 
 import { usePremium } from "@/context/PremiumContext";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
+import { useRouter } from "next/navigation";
+import { ArrowLeft, ArrowRight, Layers, Cpu, ShieldCheck, Zap } from "lucide-react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
@@ -18,6 +20,7 @@ interface WitiAppShowcaseProps {
 
 export default function WitiAppShowcase({ title, description, screenshots, features, techStack }: WitiAppShowcaseProps) {
     const { lang, theme } = usePremium();
+    const router = useRouter();
 
     const getTitle = () => {
         if (lang === 'ar') return title.ar;
@@ -35,18 +38,20 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
         <div className={`min-h-screen py-24 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[#F9F5F3]'} transition-colors duration-700`}>
             <div className="max-w-7xl mx-auto px-6">
                 
-                {/* Back Link */}
-                <motion.a 
-                    href="/witi"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className="inline-flex items-center gap-2 mb-12 text-[var(--accent-primary)] font-bold uppercase tracking-widest text-xs hover:gap-4 transition-all"
+                {/* Elevated Back Link */}
+                <motion.button 
+                    onClick={() => router.back()}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="group flex items-center gap-4 mb-16 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-[var(--accent-primary)] font-bold uppercase tracking-widest text-[0.65rem] hover:bg-[var(--accent-primary)] hover:text-white transition-all duration-500 shadow-xl backdrop-blur-md"
                 >
-                    <svg className={`w-4 h-4 ${lang === 'ar' ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                    {lang === 'ar' ? 'الرجوع للقائمة' : lang === 'fr' ? 'RETOUR AU HUB' : 'BACK TO HUB'}
-                </motion.a>
+                    <div className="relative w-6 h-6 flex items-center justify-center">
+                        <ArrowLeft className={`w-4 h-4 transition-transform group-hover:-translate-x-1 ${lang === 'ar' ? 'rotate-180 group-hover:translate-x-1' : ''}`} />
+                    </div>
+                    <span>{lang === 'ar' ? 'الرجوع للقائمة' : lang === 'fr' ? 'RETOUR AU HUB' : 'BACK TO HUB'}</span>
+                </motion.button>
 
                 <div className={`flex flex-col lg:flex-row gap-16 items-start ${lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
                     
