@@ -35,8 +35,8 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
     };
 
     return (
-        <div className={`min-h-screen py-32 px-10 md:px-20 lg:px-32 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[var(--bg-primary)]'} transition-colors duration-700 overflow-x-hidden`}>
-            <div className="max-w-[1400px] mx-auto">
+        <div className={`min-h-screen py-32 px-12 sm:px-24 md:px-32 lg:px-64 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[var(--bg-primary)]'} transition-colors duration-700 overflow-x-hidden`}>
+            <div className="w-full">
                 
                 {/* Elevated Back Link */}
                 <motion.button 
@@ -45,7 +45,7 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     animate={{ opacity: 1, y: 0 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group flex border-2 border-[var(--accent-primary)]/20 items-center gap-4 mb-20 px-8 py-3 rounded-full bg-white/5 text-[var(--accent-primary)] font-bold uppercase tracking-widest text-[0.7rem] hover:bg-[var(--accent-primary)] hover:text-white transition-all duration-500 shadow-xl backdrop-blur-md"
+                    className="group flex border-2 border-[var(--accent-primary)]/20 items-center gap-4 mb-20 px-8 py-3 rounded-none bg-white/5 text-[var(--accent-primary)] font-bold uppercase tracking-widest text-[0.7rem] hover:bg-[var(--accent-primary)] hover:text-white transition-all duration-500 shadow-xl backdrop-blur-md"
                 >
                     <div className="relative w-6 h-6 flex items-center justify-center">
                         <ArrowLeft className={`w-4 h-4 transition-transform group-hover:-translate-x-1 ${lang === 'ar' ? 'rotate-180 group-hover:translate-x-1' : ''}`} />
@@ -71,9 +71,9 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                             </p>
                         </div>
 
-                        {/* Structured Tech Architecture Display - FORCE LARGE MARGINS BEFORE & AFTER */}
+                        {/* Structured Tech Architecture Display - SHARP CORNERS & HUGE MARGINS */}
                         {techStack && (
-                          <div className="mt-24 mb-24 overflow-hidden rounded-[2.5rem] border-2 border-[var(--accent-primary)]/20 bg-white/5 backdrop-blur-sm shadow-2xl">
+                          <div className="mt-40 mb-40 overflow-hidden rounded-none border-2 border-[var(--accent-primary)]/20 bg-white/5 backdrop-blur-sm shadow-2xl">
                               <div className="bg-[var(--accent-primary)]/10 px-10 py-6 border-b-2 border-[var(--accent-primary)]/20">
                                   <h3 className="text-[0.7rem] font-black uppercase tracking-[0.5em] text-[var(--accent-primary)]">
                                       {lang === 'ar' ? 'بنيان التكنولوجيا' : lang === 'fr' ? 'ARCHITECTURE TECHNIQUE' : 'TECHNICAL STACK'}
