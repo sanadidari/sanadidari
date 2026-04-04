@@ -80,6 +80,7 @@ const content = {
     themeLabels: { light: "وضع النهار", dark: "وضع الليل" },
     menu: [
       { title: "الرئيسية", link: "#" },
+      { title: "إيكوسيستم ويتي", link: "/witi" },
       { title: "الخبرة الاستشارية", link: "#" },
       { title: "التحول الرقمي", link: "#" },
       { title: "الشركاء", link: "#" },
@@ -93,6 +94,7 @@ const content = {
     themeLabels: { light: "Mode Clair", dark: "Mode Sombre" },
     menu: [
       { title: "Accueil", link: "#" },
+      { title: "Ecosystème WITI", link: "/witi" },
       { title: "Expertise Conseil", link: "#" },
       { title: "Transformation Digitale", link: "#" },
       { title: "Partenaires", link: "#" },
@@ -106,6 +108,7 @@ const content = {
     themeLabels: { light: "Day View", dark: "Night Watch" },
     menu: [
       { title: "Home", link: "#" },
+      { title: "WITI Ecosystem", link: "/witi" },
       { title: "Strategic Advisory", link: "#" },
       { title: "Digital Evolution", link: "#" },
       { title: "Our Partners", link: "#" },
@@ -179,7 +182,7 @@ export default function Home() {
   const handleNavMouseEnter = (idx: number | null) => {
     if (megaMenuTimeoutRef.current) clearTimeout(megaMenuTimeoutRef.current);
     setHoveredIdx(idx);
-    if (idx !== null && idx >= 1 && idx <= 4) {
+    if (idx !== null && idx >= 2 && idx <= 5) {
       setActiveMegaMenu(idx);
     } else {
       setActiveMegaMenu(null);
@@ -481,7 +484,7 @@ export default function Home() {
                 onMouseLeave={handleNavMouseLeave}
               >
                 <div className="max-w-[1400px] mx-auto px-12 py-12">
-                  {activeMegaMenu === 1 && (
+                  {activeMegaMenu === 2 && (
                     /* Option 2.1: TEXT ONLY MEGA MENU (Consulting) - LINKS ABOVE IMAGE */
                     <div className="flex flex-col gap-12 animate-in fade-in slide-in-from-top-4 duration-700">
                       <div className="grid grid-cols-2 gap-12 px-12">
@@ -528,7 +531,7 @@ export default function Home() {
                     </div>
                   )}
 
-                  {activeMegaMenu === 2 && (
+                  {activeMegaMenu === 3 && (
                     /* Option 2.2: IMAGE MEGA MENU (Transformation) - 3D TILT & SHINE */
                     <div className="grid grid-cols-4 gap-4 px-12 animate-in fade-in zoom-in-95 duration-700">
                       {[
@@ -566,7 +569,7 @@ export default function Home() {
                     </div>
                   )}
 
-                  {activeMegaMenu === 3 && (
+                  {activeMegaMenu === 4 && (
                     /* Option 2.3: PARTNERS MEGA MENU (Networking) - CATEGORIZED GRID */
                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
                       <h3 className="text-center text-[var(--accent-primary)] font-bold text-2xl mb-12 uppercase tracking-[0.2em]">
@@ -636,7 +639,7 @@ export default function Home() {
                     </div>
                   )}
 
-                  {activeMegaMenu === 4 && (
+                  {activeMegaMenu === 5 && (
                     /* Option 2.4: INDEX JURIDIQUE MEGA MENU (Boutique Refined) - 3+2 HORIZONTAL GRID */
                     <div className="relative min-h-[450px] flex items-center justify-center overflow-hidden py-16 px-6">
                       {/* Atmospheric Boutique Background - Brand Sanad Brown Deep */}
@@ -1434,6 +1437,7 @@ export default function Home() {
                   let description = '';
                   if (lang === 'ar') {
                     const descAr = [
+                      "مركز الابتكار التكنولوجي لنظام WITI، يضم كافة التطبيقات والحلول الرقمية الذكية المصممة لنخبة المؤسسات.",
                       "حلول استشارية متقدمة لتوجيه وتطوير استراتيجيات مؤسستك نحو التميز. نقدم تقييمات شاملة للبنية التحتية، ونضع خططاً استراتيجية قابلة للتنفيذ لضمان تحقيق أهدافك على المدى الطويل بكفاءة.",
                       "قيادة التحول الرقمي بأحدث التقنيات لضمان مستقبل رقمي مستدام ومبتكر. نساعدك في دمج الحلول التكنولوجية الذكية، وأتمتة العمليات، ورفع مستوى حماية البيانات لتواكب تطورات السوق.",
                       "نبني علاقات استراتيجية متينة مع نخبة من الشركاء لتحقيق النجاح المشترك. نتعاون مع خبراء الصناعة وقادة الابتكار لتقديم خدمات متكاملة تضمن تفوقك في مختلف المجالات.",
@@ -1443,6 +1447,7 @@ export default function Home() {
                     description = descAr[idx] || '';
                   } else {
                     const descFr = [
+                      "Le hub technologique de l'écosystème WITI, regroupant l'ensemble des applications et solutions digitales intelligentes.",
                       "Solutions de conseil avancées pour orienter et développer vos stratégies d'entreprise. Nous évaluons vos infrastructures et élaborons des plans d'action viables pour atteindre l'excellence opérationnelle.",
                       "Piloter la transformation digitale avec les dernières technologies. Nous vous accompagnons dans l'automatisation de vos processus physiques et numériques pour innover efficacement de manière durable.",
                       "Nous bâtissons des relations stratégiques solides avec des partenaires d'élite. Notre réseau d'experts sectoriels nous permet de vous offrir une expertise complète, diversifiée et performante.",
