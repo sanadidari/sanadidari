@@ -35,8 +35,8 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
     };
 
     return (
-        <div className={`min-h-screen py-24 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[var(--bg-primary)]'} transition-colors duration-700`}>
-            <div className="max-w-[1440px] mx-auto px-10 sm:px-16 md:px-24">
+        <div className={`min-h-screen py-32 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[var(--bg-primary)]'} transition-colors duration-700`}>
+            <div className="container mx-auto px-8 sm:px-12 md:px-20 lg:px-32">
                 
                 {/* Elevated Back Link */}
                 <motion.button 
@@ -45,7 +45,7 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     animate={{ opacity: 1, y: 0 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group flex items-center gap-4 mb-16 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-[var(--accent-primary)] font-bold uppercase tracking-widest text-[0.65rem] hover:bg-[var(--accent-primary)] hover:text-white transition-all duration-500 shadow-xl backdrop-blur-md"
+                    className="group flex items-center gap-4 mb-16 px-8 py-3 rounded-full bg-white/5 border border-white/10 text-[var(--accent-primary)] font-bold uppercase tracking-widest text-[0.7rem] hover:bg-[var(--accent-primary)] hover:text-white transition-all duration-500 shadow-xl backdrop-blur-md"
                 >
                     <div className="relative w-6 h-6 flex items-center justify-center">
                         <ArrowLeft className={`w-4 h-4 transition-transform group-hover:-translate-x-1 ${lang === 'ar' ? 'rotate-180 group-hover:translate-x-1' : ''}`} />
@@ -53,17 +53,17 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     <span>{lang === 'ar' ? 'الرجوع للقائمة' : lang === 'fr' ? 'RETOUR AU HUB' : 'BACK TO HUB'}</span>
                 </motion.button>
 
-                <div className={`flex flex-col lg:flex-row gap-16 items-start ${lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
+                <div className={`flex flex-col lg:flex-row gap-24 items-start ${lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
                     
                     {/* Content Section */}
-                    <div className="lg:w-1/2 space-y-10">
-                        <div className="space-y-6">
+                    <div className="lg:w-1/2 space-y-12">
+                        <div className="space-y-8">
                             <motion.div 
                                 initial={{ scaleX: 0 }}
                                 animate={{ scaleX: 1 }}
-                                className={`h-1.5 bg-[var(--accent-primary)] w-20 ${lang === 'ar' ? 'ml-auto' : ''}`}
+                                className={`h-1.5 bg-[var(--accent-primary)] w-16 ${lang === 'ar' ? 'ml-auto' : ''}`}
                             />
-                            <h1 className="text-4xl lg:text-5xl font-black text-[var(--text-primary)] uppercase tracking-tight leading-tight">
+                            <h1 className="text-3xl lg:text-4xl font-black text-[var(--text-primary)] uppercase tracking-tight leading-tight">
                                 {getTitle()}
                             </h1>
                             <p className="text-lg text-[var(--text-primary)]/80 leading-relaxed font-medium">
@@ -71,21 +71,21 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                             </p>
                         </div>
 
-                        {/* Structured Tech Architecture Display */}
+                        {/* Structured Tech Architecture Display - ADDED MARGINS BEFORE & AFTER */}
                         {techStack && (
-                          <div className="overflow-hidden rounded-3xl border border-[var(--accent-primary)]/20 bg-white/5 backdrop-blur-sm shadow-2xl">
-                              <div className="bg-[var(--accent-primary)]/10 px-8 py-4 border-b border-[var(--accent-primary)]/20">
-                                  <h3 className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-[var(--accent-primary)]">
+                          <div className="my-16 overflow-hidden rounded-3xl border border-[var(--accent-primary)]/20 bg-white/5 backdrop-blur-sm shadow-2xl">
+                              <div className="bg-[var(--accent-primary)]/10 px-8 py-5 border-b border-[var(--accent-primary)]/20">
+                                  <h3 className="text-[0.65rem] font-black uppercase tracking-[0.45em] text-[var(--accent-primary)]">
                                       {lang === 'ar' ? 'بنيان التكنولوجيا' : lang === 'fr' ? 'ARCHITECTURE TECHNIQUE' : 'TECHNICAL STACK'}
                                   </h3>
                               </div>
-                              <div className="p-8">
-                                  <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                              <div className="p-10">
+                                  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
                                       {techStack.map((tech, idx) => (
-                                          <div key={idx} className="flex flex-col gap-1.5">
-                                              <div className="text-[10px] text-[var(--text-primary)]/30 font-bold uppercase tracking-widest">Module 0{idx + 1}</div>
-                                              <div className="text-sm font-black text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">{tech}</div>
-                                              <div className="w-6 h-[1.5px] bg-[var(--accent-primary)]/40" />
+                                          <div key={idx} className="flex flex-col gap-2 group cursor-default">
+                                              <div className="text-[9px] text-[var(--text-primary)]/30 font-extrabold uppercase tracking-widest group-hover:text-[var(--accent-primary)] transition-colors">Module 0{idx + 1}</div>
+                                              <div className="text-[0.9rem] font-black text-[var(--text-primary)] group-hover:translate-x-1 transition-all duration-300">{tech}</div>
+                                              <div className="w-8 h-[2px] bg-[var(--accent-primary)]/30 group-hover:w-12 group-hover:bg-[var(--accent-primary)] transition-all duration-300" />
                                           </div>
                                       ))}
                                   </div>
@@ -94,11 +94,11 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                         )}
 
                         {features && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-10">
                                 {features.map((feature, idx) => (
-                                    <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 group hover:border-[var(--accent-primary)]/30 transition-all shadow-lg">
-                                        <div className="w-3 h-3 rounded-full bg-[var(--accent-primary)] shadow-[0_0_15px_rgba(212,175,55,0.5)] group-hover:scale-125 transition-transform" />
-                                        <span className="text-[0.85rem] font-bold text-[var(--text-primary)] leading-tight">
+                                    <div key={idx} className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-[var(--accent-primary)]/30 transition-all shadow-lg hover:-translate-y-1 duration-300">
+                                        <div className="w-3.5 h-3.5 rounded-full bg-[var(--accent-primary)] shadow-[0_0_15px_rgba(212,175,55,0.5)] group-hover:scale-125 transition-transform" />
+                                        <span className="text-[0.9rem] font-bold text-[var(--text-primary)] leading-tight">
                                             {lang === 'ar' ? feature.ar : lang === 'fr' ? feature.fr : feature.en}
                                         </span>
                                     </div>
