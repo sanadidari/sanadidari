@@ -14,9 +14,20 @@
 ### 🏛️ The WITI Ecosystem (Wealth, Institutional, and Technical Integrity)
 As an Architect and Founder, I focus on engineering robust, sovereign digital infrastructure. The WITI ecosystem is built on zero-trust concepts, heavy cryptographic verification, and scalable clean architectures.
 
-- 🛡️ **[QRPruf](https://github.com/sanadidari/qrpruf)**: A Zero-Trust authentication and document verification protocol. Designed to ensure absolute technical integrity for sensitive institutional assets using advanced hashing and secure QR standards. Built with Flutter/Dart. *(CI/CD passing)*
-- 🏛️ **[Governance Platform](https://github.com/sanadidari/governance-platform)**: Core institutional governance and protocol management engine. Emphasizes workflow transparency and high-security compliance. Built with Laravel/PHP. *(100% Test Coverage)*
-- 📱 **[Nour Mobile](https://github.com/sanadidari/nour-mobile)**: The secure mobile extension of the Sanandidari ecosystem for real-time verification and protocol access. Built with Flutter.
+- 🛡️ **[QRPruf](https://github.com/sanadidari/qrpruf)**: Zero-Trust proof-of-presence protocol. Cryptographic GPS+timestamp certification with secure QR verification. Flutter/Dart. *(CI/CD passing)*
+- 🏛️ **[Governance Platform](https://github.com/sanadidari/governance-platform)**: Institutional governance engine for judicial oversight — RBAC, Filament dashboards, Sanctum API, PDF generation. Laravel/PHP. *(CI/CD + Feature tests)*
+- 📱 **[Nour Mobile](https://github.com/sanadidari/nour-mobile)**: Field app for judicial agents — ML Kit OCR (CIN scanner), GPS mission tracking, Supabase sync. Flutter/Dart.
+
+---
+
+### 🤖 AI-Powered Marketplace Applications
+
+Building production AI apps for the world's largest e-commerce and website platforms:
+
+- 📸 **[WITI Photo Studio](https://github.com/sanadidari/witi-photo-studio)**: Shopify embedded app — AI background removal + SDXL studio generation for product photography. Node.js + Replicate.
+- 🎬 **[WITI Viral Vision](https://github.com/sanadidari/witi-viral-vision)**: Wix app — AI product video generation with MongoDB credit system. Node.js + Replicate.
+- 🎨 **[WITI Social Assistant](https://github.com/sanadidari/witi-social-assistant)**: Wix app — CHATWITI AI creative director. Generates captions, image prompts and marketing strategy. Gemini 1.5 Flash + Replicate Flux.
+- 🖼️ **[WITI Visual Storyteller](https://github.com/sanadidari/witi-visual-storyteller)**: Wix app — Transforms product listings into visual narratives. Gemini 2.5 Flash + Wix Stores API.
 
 ---
 
@@ -37,6 +48,7 @@ I don't just consume Open Source technologies; I architect and build upon them, 
 - **Core Philosophies:** Clean Architecture, Zero-Trust Infrastructure, Digital Sovereignty, TDD.
 - **Backend & APIs:** Laravel (PHP), Node.js, REST/GraphQL.
 - **Frontend & Mobile:** Flutter (Dart), Next.js, React, TailwindCSS.
+- **AI & Integrations:** Google Gemini API, Replicate (SDXL, Flux), Wix SDK, Shopify App CLI.
 - **DevOps & Cloud:** Docker, GitHub Actions CI/CD, Vercel, Supabase.
 
 <br>
