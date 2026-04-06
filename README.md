@@ -1,45 +1,52 @@
-# Samir Chatwiti
-### Senior Engineering Manager | Software Architect | Founder @ Sanandidari
-
-Experienced Senior Engineering Manager with over 10 years of experience in architecting and delivering high-impact software solutions. Specialized in **Legal Tech**, **Governance**, and **Zero-Trust Architectures**. 
-
-Passionately driving digital sovereignty through the **WITI Ecosystem** (Wealth, Institutional, and Technical Integrity).
+<div align="center">
+  <h1>Samir CHATWITI</h1>
+  <p><strong>Senior Engineering Manager | Software Architect | Founder @ Sanandidari</strong></p>
+  <p><em>Specialized in Legal Tech, Digital Governance, and Zero-Trust Architectures.</em></p>
+  <p>
+    <a href="https://sanadidari.com" target="_blank">🌐 sanadidari.com</a> •
+    <a href="https://www.linkedin.com/in/samir-chatwiti" target="_blank">💼 LinkedIn</a> •
+    <a href="mailto:contact@sanadidari.com" target="_blank">📧 Email</a>
+  </p>
+</div>
 
 ---
 
-## Expertise & Tech Stack
+### 🏛️ The WITI Ecosystem (Wealth, Institutional, and Technical Integrity)
+As an Architect and Founder, I focus on engineering robust, sovereign digital infrastructure. The WITI ecosystem is built on zero-trust concepts, heavy cryptographic verification, and scalable clean architectures.
 
-- **Frontend & Mobile**: Next.js, React, Flutter, Tailwind CSS.
-- - **Backend & API**: Laravel (PHP), Node.js, REST/GraphQL APIs.
-  - - **Security & Integrity**: Zero-Trust, Hashing, Cryptography, Blockchain concepts.
-    - - **DevOps & Cloud**: Vercel, Docker, CI/CD, Git.
-      - - **Domain Focus**: Legal Information Systems, Digital Governance, Institutional Integrity.
-       
-        - ---
+- 🛡️ **[QRPruf](https://github.com/sanadidari/qrpruf)**: A Zero-Trust authentication and document verification protocol. Designed to ensure absolute technical integrity for sensitive institutional assets using advanced hashing and secure QR standards. Built with Flutter/Dart. *(CI/CD passing)*
+- 🏛️ **[Governance Platform](https://github.com/sanadidari/governance-platform)**: Core institutional governance and protocol management engine. Emphasizes workflow transparency and high-security compliance. Built with Laravel/PHP. *(100% Test Coverage)*
+- 📱 **[Nour Mobile](https://github.com/sanadidari/nour-mobile)**: The secure mobile extension of the Sanandidari ecosystem for real-time verification and protocol access. Built with Flutter.
 
-        ## Key Projects
+---
 
-        ### [QRPruf](https://github.com/sanadidari/qrpruf)
-        A Zero-Trust authentication and document verification system using advanced hashing and QR technology. Ensuring technical integrity for sensitive institutions.
+### 🌍 Open Source Contributions & Advanced Algorithms
+I don't just consume Open Source technologies; I architect and build upon them, focusing on deeply technical algorithms and systemic improvements.
 
-        ### [Governance](https://github.com/sanadidari/governance)
-        A robust platform for institutional governance and protocol management, built with Laravel. Focuses on transparency and workflow automation.
+- 🧠 **tscircuit/schematic-trace-solver**: 
+  - Engineered the *Trace Combine Solver* (`feat/trace-combine-solver`).
+  - Active implementation of Minimum Spanning Tree routing algorithms for electronics schematics rendering.
+- 🚀 **coollabsio/coolify**: 
+  - Structural contributions to self-hostable PaaS environments.
+- 📦 **Dokploy/templates**: 
+  - Custom expansions for one-click integrated deployment templates.
 
-        ### [Nour Mobile](https://github.com/sanadidari/nour-mobile)
-        The mobile extension of the Sanandidari ecosystem, built with Flutter, providing seamless access to governance and verification tools on the go.
+---
 
-        ---
+### ⚙️ Technical Arsenal & Architecture Standards
+- **Core Philosophies:** Clean Architecture, Zero-Trust Infrastructure, Digital Sovereignty, TDD.
+- **Backend & APIs:** Laravel (PHP), Node.js, REST/GraphQL.
+- **Frontend & Mobile:** Flutter (Dart), Next.js, React, TailwindCSS.
+- **DevOps & Cloud:** Docker, GitHub Actions CI/CD, Vercel, Supabase.
 
-        ## GitHub Stats
-        ![Samir's GitHub stats](https://github-readme-stats.vercel.app/api?username=sanadidari&show_icons=true&theme=radical)
-        ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sanadidari&layout=compact&theme=radical)
+<br>
 
-        ---
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=sanadidari&show_icons=true&theme=radical" alt="GitHub Stats" width="48%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanadidari&layout=compact&theme=radical" alt="Top Languages" width="48%">
+</div>
 
-        ## Connect with Me
-        - **LinkedIn**: [linkedin.com/in/samir-chatwiti](https://www.linkedin.com/in/samir-chatwiti)
-        - - **Website**: [sanadidari.com](https://sanadidari.com)
-          - - **Email**: [contact@sanadidari.com](mailto:contact@sanadidari.com)
-           
-            - *"Architecting the future of digital trust through institutional integrity."*
-            - 
+---
+<div align="center">
+  <i>"Architecting the future of digital trust through institutional integrity."</i>
+</div>
