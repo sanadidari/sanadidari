@@ -22,7 +22,24 @@ export default function GovernancePage() {
                 { ar: "تقارير الالتزام", fr: "Rapports de conformité auto", en: "Auto compliance reports" },
                 { ar: "إدارة المخاطر", fr: "Gestion des risques", en: "Risk assessment" }
             ]}
-            screenshots={[]}
+            screenshots={[
+                "/images/witi/governance-platform/sc1.png",
+                "/images/witi/governance-platform/sc2.png",
+                "/images/witi/governance-platform/sc3.png",
+                "/images/witi/governance-platform/sc4.png",
+                "/images/witi/governance-platform/sc5.png",
+                "/images/witi/governance-platform/sc6.png",
+                "/images/witi/governance-platform/sc7.png",
+                "/images/witi/governance-platform/sc8.png",
+                "/images/witi/governance-platform/sc9.png",
+                "/images/witi/governance-platform/sc10.png",
+                "/images/witi/governance-platform/sc11.png",
+                "/images/witi/governance-platform/sc12.png",
+                "/images/witi/governance-platform/sc13.png",
+                "/images/witi/governance-platform/sc14.png",
+                "/images/witi/governance-platform/sc15.png",
+                "/images/witi/governance-platform/sc16.png"
+            ]}
         />
     );
 }
