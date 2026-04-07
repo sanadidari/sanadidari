@@ -35,8 +35,8 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
         return description.en;
     };
 
-    const slideW = landscape ? "!w-[420px]" : "!w-[240px]";
-    const slideH = landscape ? "!h-[240px]" : "!h-[480px]";
+    const slideW = landscape ? "!w-[640px]" : "!w-[240px]";
+    const slideH = landscape ? "!h-[360px]" : "!h-[480px]";
     const imgFit = landscape ? "w-full h-full object-cover object-top" : "w-full h-full object-cover";
 
     return (
@@ -57,7 +57,7 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     <span>{lang === 'ar' ? 'الرجوع للقائمة' : lang === 'fr' ? 'RETOUR AU HUB' : 'BACK TO HUB'}</span>
                 </motion.button>
 
-                <div className={`flex flex-col lg:flex-row gap-24 items-start ${lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
+                <div className={`flex flex-col ${landscape ? '' : 'lg:flex-row'} gap-24 items-start ${!landscape && lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
 
                     {/* Content Section */}
                     <div className="lg:w-1/2 space-y-12">
