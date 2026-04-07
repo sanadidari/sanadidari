@@ -16,9 +16,10 @@ interface WitiAppShowcaseProps {
     screenshots: string[];
     features?: { ar: string; fr: string; en: string }[];
     techStack?: string[];
+    landscape?: boolean;
 }
 
-export default function WitiAppShowcase({ title, description, screenshots, features, techStack }: WitiAppShowcaseProps) {
+export default function WitiAppShowcase({ title, description, screenshots, features, techStack, landscape = false }: WitiAppShowcaseProps) {
     const { lang, theme } = usePremium();
     const router = useRouter();
 
@@ -53,7 +54,7 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     <span>{lang === 'ar' ? 'الرجوع للقائمة' : lang === 'fr' ? 'RETOUR AU HUB' : 'BACK TO HUB'}</span>
                 </motion.button>
 
-                <div className={`flex flex-col lg:flex-row gap-24 items-start ${lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
+                <div className={`flex flex-col ${landscape ? '' : 'lg:flex-row'} gap-24 items-start ${lang === 'ar' && !landscape ? 'lg:flex-row-reverse' : ''}`}>
                     
                     {/* Content Section */}
                     <div className="lg:w-1/2 space-y-12">
@@ -108,17 +109,17 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     </div>
 
                     {/* Screenshot Slider Section */}
-                    <div className="lg:w-1/2 w-full">
+                    <div className={landscape ? "w-full" : "lg:w-1/2 w-full"}>
                         <div className="relative group">
                             {/* Decorative Background Glow */}
                             <div className="absolute inset-0 bg-[var(--accent-primary)]/10 blur-[120px] rounded-full scale-110 pointer-events-none" />
-                            
+
                             <Swiper
-                                effect={'coverflow'}
+                                effect={landscape ? 'slide' : 'coverflow'}
                                 grabCursor={true}
                                 centeredSlides={true}
-                                slidesPerView={'auto'}
-                                coverflowEffect={{
+                                slidesPerView={landscape ? 1 : 'auto'}
+                                coverflowEffect={landscape ? undefined : {
                                     rotate: 50,
                                     stretch: 0,
                                     depth: 100,
@@ -137,8 +138,11 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                                 className="witi-swiper !pb-12"
                             >
                                 {screenshots.length > 0 ? screenshots.map((src, idx) => (
-                                    <SwiperSlide key={idx} className="!w-[300px] !h-[600px] rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
-                                        <img src={src} alt={`${getTitle()} Screenshot ${idx + 1}`} className="w-full h-full object-cover" />
+                                    <SwiperSlide key={idx} className={landscape
+                                        ? "!w-full rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
+                                        : "!w-[300px] !h-[600px] rounded-3xl overflow-hidden border border-white/20 shadow-2xl"
+                                    }>
+                                        <img src={src} alt={`${getTitle()} Screenshot ${idx + 1}`} className={landscape ? "w-full h-auto object-contain" : "w-full h-full object-cover"} />
                                     </SwiperSlide>
                                 )) : (
                                     /* Placeholders based on app name */
