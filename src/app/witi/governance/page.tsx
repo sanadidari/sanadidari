@@ -22,7 +22,6 @@ export default function GovernancePage() {
                 { ar: "تقارير الالتزام", fr: "Rapports de conformité auto", en: "Auto compliance reports" },
                 { ar: "إدارة المخاطر", fr: "Gestion des risques", en: "Risk assessment" }
             ]}
-            landscape={true}
             screenshots={[
                 "/images/witi/governance-platform/sc1.png",
                 "/images/witi/governance-platform/sc2.png",

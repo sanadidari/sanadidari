@@ -16,10 +16,9 @@ interface WitiAppShowcaseProps {
     screenshots: string[];
     features?: { ar: string; fr: string; en: string }[];
     techStack?: string[];
-    landscape?: boolean;
 }
 
-export default function WitiAppShowcase({ title, description, screenshots, features, techStack, landscape = false }: WitiAppShowcaseProps) {
+export default function WitiAppShowcase({ title, description, screenshots, features, techStack }: WitiAppShowcaseProps) {
     const { lang, theme } = usePremium();
     const router = useRouter();
 
@@ -38,9 +37,9 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
     return (
         <div className={`min-h-screen py-32 px-12 sm:px-24 md:px-32 lg:px-64 ${theme === 'dark' ? 'bg-[#050505]' : 'bg-[var(--bg-primary)]'} transition-colors duration-700 overflow-x-hidden`}>
             <div className="w-full">
-                
+
                 {/* Elevated Back Link */}
-                <motion.button 
+                <motion.button
                     onClick={() => router.back()}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -54,12 +53,12 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     <span>{lang === 'ar' ? 'الرجوع للقائمة' : lang === 'fr' ? 'RETOUR AU HUB' : 'BACK TO HUB'}</span>
                 </motion.button>
 
-                <div className={`flex flex-col ${landscape ? '' : 'lg:flex-row'} gap-24 items-start ${lang === 'ar' && !landscape ? 'lg:flex-row-reverse' : ''}`}>
-                    
+                <div className={`flex flex-col lg:flex-row gap-24 items-start ${lang === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
+
                     {/* Content Section */}
                     <div className="lg:w-1/2 space-y-12">
                         <div className="space-y-8">
-                            <motion.div 
+                            <motion.div
                                 initial={{ scaleX: 0 }}
                                 animate={{ scaleX: 1 }}
                                 className={`h-2 bg-[var(--accent-primary)] w-16 ${lang === 'ar' ? 'ml-auto' : ''}`}
@@ -72,7 +71,6 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                             </p>
                         </div>
 
-                        {/* Structured Tech Architecture Display - SHARP CORNERS & HUGE MARGINS */}
                         {techStack && (
                           <div className="mt-40 mb-40 overflow-hidden rounded-none border-2 border-[var(--accent-primary)]/20 bg-white/5 backdrop-blur-sm shadow-2xl">
                               <div className="bg-[var(--accent-primary)]/10 px-10 py-6 border-b-2 border-[var(--accent-primary)]/20">
@@ -109,17 +107,16 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     </div>
 
                     {/* Screenshot Slider Section */}
-                    <div className={landscape ? "w-full" : "lg:w-1/2 w-full"}>
+                    <div className="lg:w-1/2 w-full">
                         <div className="relative group">
-                            {/* Decorative Background Glow */}
                             <div className="absolute inset-0 bg-[var(--accent-primary)]/10 blur-[120px] rounded-full scale-110 pointer-events-none" />
 
                             <Swiper
-                                effect={landscape ? 'slide' : 'coverflow'}
+                                effect={'coverflow'}
                                 grabCursor={true}
                                 centeredSlides={true}
-                                slidesPerView={landscape ? 1 : 'auto'}
-                                coverflowEffect={landscape ? undefined : {
+                                slidesPerView={'auto'}
+                                coverflowEffect={{
                                     rotate: 50,
                                     stretch: 0,
                                     depth: 100,
@@ -138,16 +135,12 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                                 className="witi-swiper !pb-12"
                             >
                                 {screenshots.length > 0 ? screenshots.map((src, idx) => (
-                                    <SwiperSlide key={idx} className={landscape
-                                        ? "!w-full !h-[320px] rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
-                                        : "!w-[300px] !h-[600px] rounded-3xl overflow-hidden border border-white/20 shadow-2xl"
-                                    }>
-                                        <img src={src} alt={`${getTitle()} Screenshot ${idx + 1}`} className={landscape ? "w-full h-full object-cover object-top" : "w-full h-full object-cover"} />
+                                    <SwiperSlide key={idx} className="!w-[240px] !h-[480px] rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
+                                        <img src={src} alt={`${getTitle()} Screenshot ${idx + 1}`} className="w-full h-full object-cover" />
                                     </SwiperSlide>
                                 )) : (
-                                    /* Placeholders based on app name */
                                     [1, 2, 3].map((_, idx) => (
-                                        <SwiperSlide key={idx} className="!w-[300px] !h-[600px] rounded-3xl overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center p-8 text-center backdrop-blur-sm">
+                                        <SwiperSlide key={idx} className="!w-[240px] !h-[480px] rounded-3xl overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center p-8 text-center backdrop-blur-sm">
                                             <div className="space-y-4">
                                                 <div className="w-12 h-12 rounded-full bg-[var(--accent-primary)]/20 mx-auto animate-pulse flex items-center justify-center text-2xl">
                                                     📷
