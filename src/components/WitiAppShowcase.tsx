@@ -142,7 +142,7 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                                         ? "!w-full rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
                                         : "!w-[300px] !h-[600px] rounded-3xl overflow-hidden border border-white/20 shadow-2xl"
                                     }>
-                                        <img src={src} alt={`${getTitle()} Screenshot ${idx + 1}`} className={landscape ? "w-full h-auto object-contain" : "w-full h-full object-cover"} />
+                                        <img src={src} alt={`${getTitle()} Screenshot ${idx + 1}`} className={landscape ? "w-full max-h-[420px] object-cover object-top" : "w-full h-full object-cover"} />
                                     </SwiperSlide>
                                 )) : (
                                     /* Placeholders based on app name */
