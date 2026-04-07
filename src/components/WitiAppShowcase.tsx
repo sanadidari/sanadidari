@@ -35,8 +35,8 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
         return description.en;
     };
 
-    const slideW = landscape ? "!w-[640px]" : "!w-[240px]";
-    const slideH = landscape ? "!h-[360px]" : "!h-[480px]";
+    const slideW = landscape ? "!w-[860px]" : "!w-[240px]";
+    const slideH = landscape ? "!h-[480px]" : "!h-[480px]";
     const imgFit = landscape ? "w-full h-full object-cover object-top" : "w-full h-full object-cover";
 
     return (
@@ -111,7 +111,7 @@ export default function WitiAppShowcase({ title, description, screenshots, featu
                     </div>
 
                     {/* Screenshot Slider Section */}
-                    <div className="lg:w-1/2 w-full">
+                    <div className={landscape ? "w-full flex justify-center" : "lg:w-1/2 w-full"}>
                         <div className="relative group">
                             <div className="absolute inset-0 bg-[var(--accent-primary)]/10 blur-[120px] rounded-full scale-110 pointer-events-none" />
 
