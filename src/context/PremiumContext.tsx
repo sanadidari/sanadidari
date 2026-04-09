@@ -18,30 +18,26 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
     // Default to 'en' and 'light' initially
     const [lang, setLang] = useState<Lang>("en");
     const [theme, setTheme] = useState<Theme>("light");
-    const [mounted, setMounted] = useState(false);
 
+    // Restore persisted preferences on first mount
     useEffect(() => {
-        setMounted(true);
-        // Here we could load from localStorage if we wanted persistence
-        // const storedLang = localStorage.getItem("sanad-lang") as Lang;
-        // if (storedLang) setLang(storedLang);
-        // const storedTheme = localStorage.getItem("sanad-theme") as Theme;
-        // if (storedTheme) setTheme(storedTheme);
+        const storedLang = localStorage.getItem("sanad-lang") as Lang | null;
+        if (storedLang && ["ar", "fr", "en"].includes(storedLang)) setLang(storedLang);
+        const storedTheme = localStorage.getItem("sanad-theme") as Theme | null;
+        if (storedTheme && ["light", "dark"].includes(storedTheme)) setTheme(storedTheme);
     }, []);
 
-    // Sync theme with document class for Tailwind dark mode
+    // Sync theme with document class for Tailwind dark mode + persist
     useEffect(() => {
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
+        document.documentElement.classList.toggle("dark", theme === "dark");
+        localStorage.setItem("sanad-theme", theme);
     }, [theme]);
 
-    // Sync dir attribute for RTL/LTR
+    // Sync dir attribute for RTL/LTR + persist
     useEffect(() => {
         document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
         document.documentElement.lang = lang;
+        localStorage.setItem("sanad-lang", lang);
     }, [lang]);
 
 
