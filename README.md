@@ -31,45 +31,48 @@
          ▲ embedded in NOUR          ▲ API ▶ provisions NOUR credentials
 ```
 
-| Product | Description | Stack | Live |
-|---|---|---|---|
-| 🛡️ **[QRPruf](https://github.com/sanadidari/qrpruf)** | Zero-Trust proof-of-presence protocol. GPS+timestamp cryptographic certification, on-device AES/SHA-256 hashing, anti-spoofing | Flutter · Dart · Riverpod 3 · ML Kit | [qrpruf.com](https://qrpruf.com) |
-| 🏛️ **[Governance Platform](https://github.com/sanadidari/governance-platform)** | National judicial management engine for Morocco's bailiff corps — RBAC across 73 courts, 12 regions. Filament 3 dashboards, Sanctum API, Arabic RTL | Laravel 12 · Filament 3 · MySQL · PHP | [sanadidari.com/witi/governance](https://sanadidari.com/witi/governance) |
-| 📱 **[NOUR Mobile](https://github.com/sanadidari/nour-mobile)** | Field app for judicial officers — ML Kit CIN scanner, GPS mission tracking, offline-first sync, QRPruf embedded | Flutter · Supabase · Riverpod 3 · Dart | [sanadidari.com/witi/nour](https://sanadidari.com/witi/nour) |
+### WITI Core Protocols
+
+| | App | Description | Stack | Live |
+|---|---|---|---|---|
+| 🛡️ | **[QRPruf](https://github.com/sanadidari/qrpruf)** | Zero-trust proof-of-presence — GPS+timestamp cryptographic certification, on-device AES/SHA-256 hashing, anti-spoofing | Flutter · Dart · Riverpod 3 | [qrpruf.com](https://qrpruf.com) |
+| 🏛️ | **[Governance Platform](https://github.com/sanadidari/governance-platform)** | Judicial management for Morocco's bailiff corps — RBAC across 73 courts, 12 regions. Filament 3 dashboards, Arabic RTL | Laravel 12 · Filament 3 · MySQL | [Live](https://sanadidari.com/witi/governance) |
+| 📱 | **[NOUR Mobile](https://github.com/sanadidari/nour-mobile)** | Field app for judicial officers — ML Kit CIN scanner, GPS mission tracking, offline-first sync, QRPruf embedded | Flutter · Supabase · Riverpod 3 | [Live](https://sanadidari.com/witi/nour) |
 
 ---
 
 ## 🤖 AI-Powered Marketplace Applications
 
-Production AI integrations for the world's largest e-commerce platforms.
+Production AI integrations deployed on Shopify and Wix platforms.
 
-**Shopify Apps**
+### Shopify
 
-| App | Description | Stack |
-|---|---|---|
-| 📸 **[WITI Photo Studio](https://github.com/sanadidari/witi-photo-studio)** | AI background removal + SDXL studio shot generation for product photography | Node.js · Replicate · Shopify Polaris |
+| | App | Description | Stack | Live |
+|---|---|---|---|---|
+| 📸 | **[WITI Photo Studio](https://github.com/sanadidari/witi-photo-studio)** | AI background removal + SDXL studio shot generation for product photography | Node.js · Replicate SDXL · Shopify Polaris | [Live](https://sanadidari.com/witi/witi-studio) |
 
-**Wix Apps**
+### Wix
 
-| App | Description | Stack |
-|---|---|---|
-| 🎬 **[WITI Viral Vision](https://github.com/sanadidari/witi-viral-vision)** | AI product video generation with credit system | Node.js · Replicate · MongoDB |
-| 🎨 **[WITI Social Assistant](https://github.com/sanadidari/witi-social-assistant)** | AI creative director — captions, image prompts, marketing strategy | Gemini 2.5 Flash · Replicate Flux |
-| 🖼️ **[WITI Visual Storyteller](https://github.com/sanadidari/witi-visual-storyteller)** | Transforms product listings into visual narratives | Gemini 2.5 Flash · Wix Stores API |
+| | App | Description | Stack | Live |
+|---|---|---|---|---|
+| 🎨 | **[WITI Social Assistant](https://github.com/sanadidari/witi-social-assistant)** | AI creative director — captions, image prompts, marketing strategy | Gemini 2.5 Flash · Replicate Flux | [Live](https://sanadidari.com/witi/witi-social) |
+| 🎬 | **[WITI Viral Vision](https://github.com/sanadidari/witi-viral-vision)** | AI product video generation with credit system | Node.js · Replicate · MongoDB | [Live](https://sanadidari.com/witi/witi-viral) |
+| 🖼️ | **[WITI Visual Storyteller](https://github.com/sanadidari/witi-visual-storyteller)** | Transforms product listings into visual narratives | Gemini 2.5 Flash · Wix Stores API | [Live](https://sanadidari.com/witi/witi-shopify) |
 
 ---
 
 ## 📊 Google Workspace Automation Suite
 
-Five production-grade Google Apps Script add-ons with AI-powered workflows.
+Six production Google Apps Script add-ons with AI-powered workflows.
 
-| Add-on | Category | AI Model | Platform |
+| | Add-on | Description | Live |
 |---|---|---|---|
-| ⚡ **[AutoScript AI](https://github.com/sanadidari/autoscript)** | Spreadsheet automation & code generation | Gemini 2.5 | Google Sheets |
-| 📋 **[FlashBoard AI](https://github.com/sanadidari/flashboard)** | Instant AI dashboard generation from raw data | Gemini 2.5 | Google Sheets |
-| 📧 **[MailFlow AI](https://github.com/sanadidari/mailflow)** | AI email composition & communication director | Gemini 2.5 | Gmail Add-on |
-| 🔍 **[Sheet Radar AI](https://github.com/sanadidari/sheetradar)** | Anomaly detection & data quality monitoring | Gemini 2.5 | Google Sheets |
-| 📌 **[SmartPaste AI](https://github.com/sanadidari/smartpaste)** | Intelligent copy-paste with data transmutation | Gemini 2.5 | Google Sheets |
+| ⚡ | **[AutoScript AI](https://github.com/sanadidari/autoscript)** | Spreadsheet automation & AI code generation — natural language to Apps Script via Gemini 2.5 | [Live](https://sanadidari.com/witi/autoscript) |
+| 📋 | **[FlashBoard AI](https://github.com/sanadidari/flashboard)** | Instant AI dashboard generation — charts, KPIs and summaries from raw data | [Live](https://sanadidari.com/witi/flashboard) |
+| 📧 | **[MailFlow AI](https://github.com/sanadidari/mailflow)** | AI email composition & communication director for Gmail | [Live](https://sanadidari.com/witi/mailflow) |
+| 🔍 | **[Sheet Radar AI](https://github.com/sanadidari/sheetradar)** | Data anomaly detection & quality monitoring for Google Sheets | [Live](https://sanadidari.com/witi/sheetradar) |
+| 📌 | **[SmartPaste AI](https://github.com/sanadidari/smartpaste)** | Intelligent copy-paste with data transmutation — CSV, JSON, PDF to structured columns | [Live](https://sanadidari.com/witi/smartpaste) |
+| 🎯 | **[Resume Ranker AI](https://github.com/sanadidari/ai-resume-ranker)** | AI-powered resume screening & ranking for HR workflow automation | [Live](https://sanadidari.com/witi/resume-ranker) |
 
 ---
 
