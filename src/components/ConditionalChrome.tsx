@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 
 // Pages that render their own nav/footer and must hide the global sanadidari chrome
-const STANDALONE_PAGES = ["/witi/nour"];
+const STANDALONE_PAGES = ["/witi/nour", "/witi/governance"];
 
 export default function ConditionalChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
