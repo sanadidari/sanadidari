@@ -5,7 +5,7 @@
   <p>
     <a href="https://sanadidari.com">🌐 sanadidari.com</a> •
     <a href="https://www.linkedin.com/in/samir-chatwiti">💼 LinkedIn</a> •
-    <a href="mailto:contact@sanadidari.com">📧 contact@sanadidari.com</a>
+    <a href="mailto:supportsanad@sanadidari.com">📧 supportsanad@sanadidari.com</a>
   </p>
 </div>
 
