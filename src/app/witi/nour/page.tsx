@@ -2,14 +2,32 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 const G = "#D4AF37";
 const GD = "#B8960C";
 const N = "#0D1F3C";
 
+const SCREENS = [
+  { src: "/images/witi/nour/news_home.jpeg", label: "News & Activities" },
+  { src: "/images/witi/nour/nour2.jpeg", label: "Dashboard · Light" },
+  { src: "/images/witi/nour/nour1.jpeg", label: "Dashboard · Dark" },
+  { src: "/images/witi/nour/nour3.jpeg", label: "Legal Library" },
+  { src: "/images/witi/nour/nour6.jpeg", label: "Service Form" },
+  { src: "/images/witi/nour/nour7.jpeg", label: "Service Details" },
+  { src: "/images/witi/nour/nour8.jpeg", label: "GPS Proof Summary" },
+  { src: "/images/witi/nour/dark_mode_settings.jpeg", label: "Settings · Dark" },
+  { src: "/images/witi/nour/light_mode_settings.jpeg", label: "Settings · Light" },
+];
+
 export default function NourPage() {
   const revealRefs = useRef<HTMLElement[]>([]);
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const openLightbox = useCallback((i: number) => setLightbox(i), []);
+  const closeLightbox = useCallback(() => setLightbox(null), []);
+  const prev = useCallback(() => setLightbox((i) => (i === null ? null : (i - 1 + SCREENS.length) % SCREENS.length)), []);
+  const next = useCallback(() => setLightbox((i) => (i === null ? null : (i + 1) % SCREENS.length)), []);
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -26,6 +44,17 @@ export default function NourPage() {
     revealRefs.current.forEach((el) => el && obs.observe(el));
     return () => obs.disconnect();
   }, []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (lightbox === null) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, closeLightbox, prev, next]);
 
   const reveal = (el: HTMLElement | null) => {
     if (!el || revealRefs.current.includes(el)) return;
@@ -242,33 +271,54 @@ export default function NourPage() {
             <h2 style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 800, color: N }}>
               Real screens.<br />Real field operations.
             </h2>
+            <p style={{ fontSize: 14, color: "#9CA3AF", marginTop: 12 }}>Click any screen to enlarge</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(155px, 1fr))", gap: 24, justifyItems: "center" }}>
-            {[
-              { src: "/images/witi/nour/news_home.jpeg", label: "News & Activities" },
-              { src: "/images/witi/nour/nour2.jpeg", label: "Dashboard · Light" },
-              { src: "/images/witi/nour/nour1.jpeg", label: "Dashboard · Dark" },
-              { src: "/images/witi/nour/nour3.jpeg", label: "Legal Library" },
-              { src: "/images/witi/nour/nour6.jpeg", label: "Service Form" },
-              { src: "/images/witi/nour/nour7.jpeg", label: "Service Details" },
-              { src: "/images/witi/nour/nour8.jpeg", label: "GPS Proof Summary" },
-              { src: "/images/witi/nour/dark_mode_settings.jpeg", label: "Settings · Dark" },
-              { src: "/images/witi/nour/light_mode_settings.jpeg", label: "Settings · Light" },
-            ].map((s, i) => (
+            {SCREENS.map((s, i) => (
               <div
                 key={i}
                 ref={reveal}
                 style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}
               >
-                <div style={{
-                  width: 150, height: 316,
-                  borderRadius: 22, overflow: "hidden",
-                  border: "4px solid white",
-                  boxShadow: "0 8px 28px rgba(0,0,0,0.14)",
-                  position: "relative",
-                }}>
+                <div
+                  onClick={() => openLightbox(i)}
+                  style={{
+                    width: 150, height: 316,
+                    borderRadius: 22, overflow: "hidden",
+                    border: "4px solid white",
+                    boxShadow: "0 8px 28px rgba(0,0,0,0.14)",
+                    position: "relative",
+                    cursor: "zoom-in",
+                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = `0 16px 40px rgba(212,175,55,0.3)`;
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 28px rgba(0,0,0,0.14)";
+                  }}
+                >
                   <Image src={s.src} alt={s.label} fill style={{ objectFit: "cover" }} />
+                  {/* Hover overlay */}
+                  <div style={{
+                    position: "absolute", inset: 0,
+                    background: "rgba(212,175,55,0.12)",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    opacity: 0, transition: "opacity 0.2s",
+                  }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0"; }}
+                  >
+                    <div style={{
+                      width: 44, height: 44, borderRadius: "50%",
+                      background: "rgba(255,255,255,0.9)",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      fontSize: 20,
+                    }}>🔍</div>
+                  </div>
                 </div>
                 <span style={{ fontSize: 11, color: "#6B7280", fontWeight: 600, textAlign: "center" }}>{s.label}</span>
               </div>
@@ -276,6 +326,101 @@ export default function NourPage() {
           </div>
         </div>
       </section>
+
+      {/* ── LIGHTBOX ── */}
+      {lightbox !== null && (
+        <div
+          onClick={closeLightbox}
+          style={{
+            position: "fixed", inset: 0, zIndex: 1000,
+            background: "rgba(0,0,0,0.92)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            animation: "fadeIn 0.25s ease",
+          }}
+        >
+          {/* Prev */}
+          <button
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+            style={{
+              position: "absolute", left: 24, top: "50%", transform: "translateY(-50%)",
+              background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)",
+              borderRadius: "50%", width: 52, height: 52,
+              color: "white", fontSize: 22, cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              transition: "background 0.2s",
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = `rgba(212,175,55,0.3)`; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.1)"; }}
+          >‹</button>
+
+          {/* Image */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: "relative",
+              width: "min(380px, 90vw)",
+              height: "min(780px, 85vh)",
+              borderRadius: 28,
+              overflow: "hidden",
+              border: `4px solid ${G}`,
+              boxShadow: `0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(212,175,55,0.3)`,
+              animation: "scaleIn 0.25s ease",
+            }}
+          >
+            <Image src={SCREENS[lightbox].src} alt={SCREENS[lightbox].label} fill style={{ objectFit: "cover" }} />
+          </div>
+
+          {/* Next */}
+          <button
+            onClick={(e) => { e.stopPropagation(); next(); }}
+            style={{
+              position: "absolute", right: 24, top: "50%", transform: "translateY(-50%)",
+              background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)",
+              borderRadius: "50%", width: 52, height: 52,
+              color: "white", fontSize: 22, cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              transition: "background 0.2s",
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = `rgba(212,175,55,0.3)`; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.1)"; }}
+          >›</button>
+
+          {/* Label + counter */}
+          <div style={{
+            position: "absolute", bottom: 32,
+            display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
+          }}>
+            <span style={{ color: "white", fontWeight: 700, fontSize: 15 }}>{SCREENS[lightbox].label}</span>
+            <span style={{ color: "rgba(255,255,255,0.4)", fontSize: 13 }}>{lightbox + 1} / {SCREENS.length}</span>
+            <div style={{ display: "flex", gap: 6, marginTop: 4 }}>
+              {SCREENS.map((_, i) => (
+                <div
+                  key={i}
+                  onClick={(e) => { e.stopPropagation(); setLightbox(i); }}
+                  style={{
+                    width: i === lightbox ? 20 : 6, height: 6,
+                    borderRadius: 3, cursor: "pointer",
+                    background: i === lightbox ? G : "rgba(255,255,255,0.3)",
+                    transition: "all 0.2s",
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Close */}
+          <button
+            onClick={closeLightbox}
+            style={{
+              position: "absolute", top: 20, right: 20,
+              background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)",
+              borderRadius: "50%", width: 44, height: 44,
+              color: "white", fontSize: 20, cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}
+          >✕</button>
+        </div>
+      )}
 
       {/* ── GPS PROOF HIGHLIGHT ── */}
       <section style={{ padding: "100px 48px", background: N }}>
@@ -437,6 +582,14 @@ export default function NourPage() {
         @keyframes pulse {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.4; }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+          from { opacity: 0; transform: scale(0.88); }
+          to { opacity: 1; transform: scale(1); }
         }
       `}</style>
     </div>
