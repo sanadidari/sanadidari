@@ -229,14 +229,14 @@ export default function WitiHubPage() {
                 <div className={`absolute top-0 left-1/4 w-[800px] h-[400px] rounded-full blur-[160px] ${isDark ? "bg-[var(--accent-primary)]/5" : "bg-[var(--accent-primary)]/8"}`} />
             </div>
 
-            <div className="relative z-10 pt-36 pb-24" style={{ maxWidth: '860px', margin: '0 auto', padding: '9rem 2rem 6rem' }}>
+            <div className="relative z-10" style={{ maxWidth: '860px', margin: '0 auto', padding: '4.5rem 2rem 3rem' }}>
 
                 {/* Back */}
                 <motion.a
                     href="/"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className={`inline-flex items-center gap-2 mb-16 text-[0.7rem] font-bold uppercase tracking-[0.3em] ${isDark ? "text-white/30 hover:text-white/60" : "text-black/30 hover:text-black/60"} transition-colors`}
+                    className={`inline-flex items-center gap-2 mb-8 text-[0.65rem] font-bold uppercase tracking-[0.3em] ${isDark ? "text-white/30 hover:text-white/60" : "text-black/30 hover:text-black/60"} transition-colors`}
                 >
                     <span className={isRTL ? "rotate-180 inline-block" : ""}>←</span>
                     {lang === "ar" ? "العودة للرئيسية" : lang === "fr" ? "RETOUR AU PORTAIL" : "BACK TO THE PORTAL"}
@@ -247,7 +247,7 @@ export default function WitiHubPage() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="mb-20 space-y-4"
+                    className="mb-10 space-y-3"
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[0.65rem] font-bold uppercase tracking-widest border"
                         style={{
@@ -259,13 +259,13 @@ export default function WitiHubPage() {
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-primary)] animate-pulse" />
                         {lang === "ar" ? "إيكوسيستم ويتي" : "WITI ECOSYSTEM"}
                     </div>
-                    <h1 className={`text-3xl lg:text-5xl font-black leading-[1.1] tracking-tight ${isDark ? "text-white" : "text-[#1A1A2E]"}`}>
+                    <h1 className={`text-2xl lg:text-4xl font-black leading-[1.1] tracking-tight ${isDark ? "text-white" : "text-[#1A1A2E]"}`}>
                         {lang === "ar" ? "منظومة" : "Institutional"}{" "}
                         <span className="text-[var(--accent-primary)]">
                             {lang === "ar" ? "الثقة الرقمية" : lang === "fr" ? "Intelligence" : "Intelligence"}
                         </span>
                     </h1>
-                    <p className={`text-sm leading-relaxed max-w-md ${isDark ? "text-white/50" : "text-black/50"}`}>
+                    <p className={`text-xs leading-relaxed max-w-md ${isDark ? "text-white/50" : "text-black/50"}`}>
                         {lang === "ar"
                             ? "منظومة متكاملة من البروتوكولات والتطبيقات الذكية المبنية على الثقة الصفرية."
                             : lang === "fr"
@@ -275,7 +275,7 @@ export default function WitiHubPage() {
                 </motion.div>
 
                 {/* Categories */}
-                <div className="space-y-20">
+                <div className="space-y-10">
                     {categories.map((cat, catIdx) => (
                         <section key={cat.id}>
 
@@ -284,12 +284,12 @@ export default function WitiHubPage() {
                                 initial={{ opacity: 0, y: 12 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="mb-10"
+                                className="mb-5"
                             >
-                                <span className={`inline-block text-[0.6rem] font-black uppercase tracking-[0.5em] px-3 py-1 rounded-full mb-3 ${isDark ? "bg-white/5 text-white/40" : "bg-black/5 text-black/40"}`}>
+                                <span className={`inline-block text-[0.55rem] font-black uppercase tracking-[0.5em] px-3 py-1 rounded-full mb-2 ${isDark ? "bg-white/5 text-white/40" : "bg-black/5 text-black/40"}`}>
                                     {t(cat.tag)}
                                 </span>
-                                <h2 className={`text-xl font-black uppercase tracking-tight ${isDark ? "text-white/80" : "text-[#1A1A2E]/80"}`}>
+                                <h2 className={`text-base font-black uppercase tracking-tight ${isDark ? "text-white/80" : "text-[#1A1A2E]/80"}`}>
                                     {t(cat.title)}
                                 </h2>
                             </motion.div>
@@ -318,10 +318,10 @@ export default function WitiHubPage() {
                                         <div className="flex-1 min-w-0">
                                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                                                 <div className="space-y-1.5">
-                                                    <h3 className={`text-[0.95rem] font-black tracking-tight ${isDark ? "text-white" : "text-[#1A1A2E]"}`}>
+                                                    <h3 className={`text-[0.85rem] font-black tracking-tight ${isDark ? "text-white" : "text-[#1A1A2E]"}`}>
                                                         {app.title}
                                                     </h3>
-                                                    <p className={`text-sm leading-[1.7] mt-1 ${isDark ? "text-white/45" : "text-black/50"}`}>
+                                                    <p className={`text-xs leading-[1.7] mt-1 ${isDark ? "text-white/45" : "text-black/50"}`}>
                                                         {t(app.description)}
                                                     </p>
                                                     <div className="flex flex-wrap gap-1.5 pt-1">
@@ -381,7 +381,7 @@ export default function WitiHubPage() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className={`mt-24 pt-12 border-t text-center ${isDark ? "border-white/8" : "border-black/8"}`}
+                    className={`mt-12 pt-6 border-t text-center ${isDark ? "border-white/8" : "border-black/8"}`}
                 >
                     <p className={`text-[0.75rem] font-medium italic ${isDark ? "text-white/25" : "text-black/30"}`}>
                         {lang === "ar"
