@@ -229,7 +229,7 @@ export default function WitiHubPage() {
                 <div className={`absolute top-0 left-1/4 w-[800px] h-[400px] rounded-full blur-[160px] ${isDark ? "bg-[var(--accent-primary)]/5" : "bg-[var(--accent-primary)]/8"}`} />
             </div>
 
-            <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-10 pt-32 pb-24">
+            <div className="relative z-10 max-w-3xl mx-auto px-8 md:px-12 pt-36 pb-24">
 
                 {/* Back */}
                 <motion.a
@@ -259,13 +259,13 @@ export default function WitiHubPage() {
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-primary)] animate-pulse" />
                         {lang === "ar" ? "إيكوسيستم ويتي" : "WITI ECOSYSTEM"}
                     </div>
-                    <h1 className={`text-4xl lg:text-6xl font-black leading-[1.0] tracking-tight ${isDark ? "text-white" : "text-[#1A1A2E]"}`}>
-                        {lang === "ar" ? "منظومة" : "Institutional"}<br />
+                    <h1 className={`text-3xl lg:text-5xl font-black leading-[1.1] tracking-tight ${isDark ? "text-white" : "text-[#1A1A2E]"}`}>
+                        {lang === "ar" ? "منظومة" : "Institutional"}{" "}
                         <span className="text-[var(--accent-primary)]">
                             {lang === "ar" ? "الثقة الرقمية" : lang === "fr" ? "Intelligence" : "Intelligence"}
                         </span>
                     </h1>
-                    <p className={`text-base leading-relaxed max-w-lg ${isDark ? "text-white/50" : "text-black/50"}`}>
+                    <p className={`text-sm leading-relaxed max-w-md ${isDark ? "text-white/50" : "text-black/50"}`}>
                         {lang === "ar"
                             ? "منظومة متكاملة من البروتوكولات والتطبيقات الذكية المبنية على الثقة الصفرية."
                             : lang === "fr"
@@ -275,7 +275,7 @@ export default function WitiHubPage() {
                 </motion.div>
 
                 {/* Categories */}
-                <div className="space-y-24">
+                <div className="space-y-20">
                     {categories.map((cat, catIdx) => (
                         <section key={cat.id}>
 
@@ -295,7 +295,7 @@ export default function WitiHubPage() {
                             </motion.div>
 
                             {/* App cards */}
-                            <div className="space-y-4">
+                            <div className="space-y-3">
                                 {cat.apps.map((app, idx) => (
                                     <motion.div
                                         key={app.id}
@@ -303,7 +303,7 @@ export default function WitiHubPage() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: idx * 0.06, duration: 0.45 }}
-                                        className={`group flex items-start gap-5 p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${
+                                        className={`group flex items-start gap-6 p-7 rounded-2xl border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${
                                             isDark
                                                 ? "bg-white/[0.03] border-white/8 hover:border-[var(--accent-primary)]/25 hover:bg-white/[0.05]"
                                                 : "bg-white border-black/6 hover:border-[var(--accent-primary)]/30 shadow-sm hover:shadow-md"
@@ -321,7 +321,7 @@ export default function WitiHubPage() {
                                                     <h3 className={`text-[0.95rem] font-black tracking-tight ${isDark ? "text-white" : "text-[#1A1A2E]"}`}>
                                                         {app.title}
                                                     </h3>
-                                                    <p className={`text-[0.82rem] leading-relaxed ${isDark ? "text-white/45" : "text-black/50"}`}>
+                                                    <p className={`text-sm leading-[1.7] mt-1 ${isDark ? "text-white/45" : "text-black/50"}`}>
                                                         {t(app.description)}
                                                     </p>
                                                     <div className="flex flex-wrap gap-1.5 pt-1">
