@@ -4,6 +4,7 @@ import "./globals.css";
 import Chatbot from "@/components/Chatbot";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ConditionalChrome from "@/components/ConditionalChrome";
 import { PremiumProvider } from "@/context/PremiumContext";
 
 const cairo = Cairo({
@@ -38,12 +39,11 @@ export default function RootLayout({
     <html lang="ar">
       <body className={`${cairo.variable} ${playfair.variable} ${montserrat.variable} font-cairo antialiased flex flex-col min-h-screen`}>
         <PremiumProvider>
-          <Header />
+          <ConditionalChrome><Header /></ConditionalChrome>
           <div className="flex-grow">
             {children}
           </div>
-          <Footer />
-          <Chatbot />
+          <ConditionalChrome><Footer /><Chatbot /></ConditionalChrome>
         </PremiumProvider>
       </body>
     </html>
