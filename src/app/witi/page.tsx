@@ -229,7 +229,7 @@ export default function WitiHubPage() {
                 <div className={`absolute top-0 left-1/4 w-[800px] h-[400px] rounded-full blur-[160px] ${isDark ? "bg-[var(--accent-primary)]/5" : "bg-[var(--accent-primary)]/8"}`} />
             </div>
 
-            <div className="relative z-10 px-8 sm:px-16 md:px-32 lg:px-48 xl:px-64 pt-36 pb-24">
+            <div className="relative z-10 px-8 sm:px-20 md:px-36 lg:px-56 xl:px-72 pt-36 pb-24">
 
                 {/* Back */}
                 <motion.a
@@ -295,7 +295,7 @@ export default function WitiHubPage() {
                             </motion.div>
 
                             {/* App cards */}
-                            <div className="space-y-3">
+                            <div className="space-y-5">
                                 {cat.apps.map((app, idx) => (
                                     <motion.div
                                         key={app.id}
