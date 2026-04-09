@@ -73,6 +73,18 @@ Five production-grade Google Apps Script add-ons with AI-powered workflows.
 
 ---
 
+## 🔧 Open Source Contributions
+
+Active contributor to established OSS projects via bounty programs (Opire · Polar.sh · OnlyDust).
+
+| Project | Contribution | Status |
+|---|---|---|
+| **[tscircuit/schematic-trace-solver](https://github.com/tscircuit/schematic-trace-solver/pull/154)** | `TraceCombineSolver` — merges parallel same-net trace segments using distance-threshold algorithm. 17 files, 1179 additions. | PR #154 Open |
+| **[coollabsio/coolify](https://github.com/coollabsio/coolify)** | Global toggle for OAuth registration — admin-level control over OAuth-based account creation | Submitted |
+| **[Dokploy/templates](https://github.com/sanadidari/templates)** | Matomo analytics blueprint — full Docker Compose template with sorted meta, flat variables, official schema | In progress |
+
+---
+
 ## ⚙️ Technical Arsenal
 
 ```
