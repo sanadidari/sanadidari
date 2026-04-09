@@ -1,9 +1,10 @@
 <div align="center">
   <h1>Samir CHATWITI</h1>
   
-  > **20+ years in software engineering · 7 years as Director of Operations & Pedagogical Director · Now Founder & Architect building institutional-grade systems.**
+  > **Principal Software Architect & Tech Lead | 20+ years of engineering excellence.**
   
   <p>
+    <a href="https://github.com/sanadidari/qrpruf/actions"><img src="https://img.shields.io/github/actions/workflow/status/sanadidari/qrpruf/production_ci.yml?label=CI%20QRPruf&style=for-the-badge" alt="CI"></a>
     <img src="https://img.shields.io/badge/Building%20Since-2002-navy?style=for-the-badge&color=0D1F3C" alt="Building Since 2002">
     <img src="https://img.shields.io/badge/Experience-20%2B%20Years-blue?style=for-the-badge" alt="Experience 20+ Years">
     <img src="https://img.shields.io/badge/Ex--Director%20of%20Operations-7%20Years-orange?style=for-the-badge" alt="Ex-Director 7 Years">
@@ -15,7 +16,9 @@
   </p>
 </div>
 
-Most of my prior work was delivered under private enterprise repositories, internal platforms, and client-owned codebases — not visible on GitHub by design. This public profile (active since 2025) is where I publish **open work**: protocols, products, OSS contributions. I build because I understand the full stack — technical, organizational, and institutional.
+Most of my prior work was delivered under private enterprise repositories, internal platforms, and client-owned codebases. I currently operate as an independent Principal Consultant through my structure, Sanadidari, where I architect high-trust, institutional-grade systems and open-source protocols. 
+
+*I bring technical leadership, zero-trust security expertise, and modern Flutter/Node stacks to demanding enterprise clients.*
 
 ---
 
@@ -92,15 +95,16 @@ Active contributor to established OSS projects via bounty programs (Opire · Pol
 
 ---
 
-## ⚙️ Technical Arsenal
+## ⚙️ Engineering Expertise & Technical Arsenal
 
-```
-Backend & APIs     │ Laravel (PHP), Node.js, REST, Sanctum
-Frontend & Mobile  │ Flutter (Dart), Next.js 15, React, TailwindCSS v4
-AI & Integrations  │ Google Gemini API, Replicate (SDXL, Flux), ML Kit
-DevOps & Cloud     │ Docker, GitHub Actions CI/CD, Vercel, Supabase, Coolify
-Architecture       │ Clean Architecture, Feature-Driven Design, Zero-Trust
-```
+### ⚡ Core Mastery (Deep Expertise)
+- **Mobile Architecture:** Flutter (Dart), Riverpod 3.0, Clean Architecture, Feature-Driven Design.
+- **Security & Systems:** Zero-Trust implementation, On-device cryptography (AES/SHA-256), Hardware biometric vaults.
+
+### 🔧 Full-Stack & Integration Capabilities (Breadth)
+- **Backend & APIs:** Laravel (PHP 8+), Node.js, Next.js 15, Sanctum, RESTful design.
+- **AI Integration:** Google Gemini API, Replicate (SDXL, Flux), ML Kit (Vision/Document scanning).
+- **Cloud & DevOps:** GitHub Actions CI/CD pipelines, Docker, Supabase, Vercel, Coolify.
 
 ---
 
