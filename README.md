@@ -103,6 +103,26 @@ Architecture       │ Clean Architecture, Feature-Driven Design, Zero-Trust
 
 ---
 
+## 🧭 Career Path
+
+20+ years building software across institutional, governmental, and commercial environments.
+
+```
+2002        Programmer-Analyst diploma (Canada) — entered the field as a builder
+2002–2015   Engineering → Technical Lead → Software Architect
+2015–2022   Director of Operations · Project Director · Pedagogical Director
+2022–now    Founder @ Sanadidari SARL — back to building, at institutional scale
+```
+
+> Most of my prior work was delivered under private enterprise repositories, internal platforms,
+> and client-owned codebases — not visible on GitHub by design.
+> This public profile (active since 2025) is where I publish **open work**: protocols, products, OSS contributions.
+
+The switch from manager back to hands-on founder is intentional.
+I build because I understand the full stack — technical, organizational, and institutional.
+
+---
+
 <div align="center">
   <i>"Architecting the future of digital trust through institutional integrity."</i>
 </div>
