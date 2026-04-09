@@ -1,13 +1,21 @@
 <div align="center">
   <h1>Samir CHATWITI</h1>
-  <p><strong>Senior Engineering Manager · Software Architect · Founder @ Sanadidari SARL</strong></p>
-  <p><em>Specialized in Legal Tech, Digital Governance, and Zero-Trust Architectures.</em></p>
+  
+  > **20+ years in software engineering · 7 years as Director of Operations & Pedagogical Director · Now Founder & Architect building institutional-grade systems.**
+  
   <p>
-    <a href="https://sanadidari.com">🌐 sanadidari.com</a> •
-    <a href="https://www.linkedin.com/in/samir-chatwiti">💼 LinkedIn</a> •
-    <a href="mailto:supportsanad@sanadidari.com">📧 supportsanad@sanadidari.com</a>
+    <a href="https://github.com/sanadidari/qrpruf/actions"><img src="https://img.shields.io/github/actions/workflow/status/sanadidari/qrpruf/ci.yml?label=CI%20QRPruf&style=for-the-badge" alt="CI"></a>
+    <a href="https://github.com/sanadidari/governance-platform/actions"><img src="https://img.shields.io/github/actions/workflow/status/sanadidari/governance-platform/ci.yml?label=CI%20Governance&style=for-the-badge" alt="CI"></a>
+    <img src="https://img.shields.io/badge/Experience-20%2B%20Years-blue?style=for-the-badge" alt="Experience 20+ Years">
+    <img src="https://img.shields.io/badge/Ex--Director%20of%20Operations-7%20Years-orange?style=for-the-badge" alt="Ex-Director 7 Years">
+  </p>
+
+  <p>
+    📍 Casablanca · 🌐 <a href="https://sanadidari.com">sanadidari.com</a> · 💼 <a href="https://www.linkedin.com/in/samir-chatwiti">LinkedIn</a>
   </p>
 </div>
+
+Most of my prior work was delivered under private enterprise repositories, internal platforms, and client-owned codebases — not visible on GitHub by design. This public profile (active since 2025) is where I publish **open work**: protocols, products, OSS contributions. I build because I understand the full stack — technical, organizational, and institutional.
 
 ---
 
@@ -15,20 +23,16 @@
 
 > **WITI** (Wealth · Institutional · Technical Integrity) is a sovereign digital infrastructure stack engineered for institutional-grade trust, cryptographic proof, and judicial governance.
 
-```
-                        ┌─────────────────────────────┐
-                        │        WITI Ecosystem        │
-                        └──────────────┬──────────────┘
-                                       │
-               ┌───────────────────────┼───────────────────────┐
-               │                       │                       │
-   ┌───────────▼──────────┐ ┌──────────▼─────────┐ ┌──────────▼──────────┐
-   │   🛡️ QRPruf           │ │  🏛️ Governance     │ │  📱 NOUR Mobile     │
-   │   Proof of Presence   │ │  Platform           │ │  (WITI Field)       │
-   │   (Core Protocol)     │ │  (Judicial Admin)   │ │  (Field Agent App)  │
-   │   Flutter · Dart      │ │  Laravel · Filament │ │  Flutter · Supabase │
-   └───────────────────────┘ └────────────────────┘ └─────────────────────┘
-         ▲ embedded in NOUR          ▲ API ▶ provisions NOUR credentials
+```text
+┌───────────────────────────┐
+│      WITI Ecosystem       │
+└─────────────┬─────────────┘
+              │
+   ┌──────────┼──────────┐
+   ▼          ▼          ▼
+🛡️ QRPruf  🏛️ Gov. Plat.📱 NOUR Mobile
+(Core)     (Admin)      (Field App)
+Flutter    Laravel      Flutter
 ```
 
 ### WITI Core Protocols
@@ -106,23 +110,7 @@ Architecture       │ Clean Architecture, Feature-Driven Design, Zero-Trust
 
 ---
 
-## 🧭 Career Path
 
-20+ years building software across institutional, governmental, and commercial environments.
-
-```
-2002        Programmer-Analyst diploma (Canada) — entered the field as a builder
-2002–2015   Engineering → Technical Lead → Software Architect
-2015–2022   Director of Operations · Project Director · Pedagogical Director
-2022–now    Founder @ Sanadidari SARL — back to building, at institutional scale
-```
-
-> Most of my prior work was delivered under private enterprise repositories, internal platforms,
-> and client-owned codebases — not visible on GitHub by design.
-> This public profile (active since 2025) is where I publish **open work**: protocols, products, OSS contributions.
-
-The switch from manager back to hands-on founder is intentional.
-I build because I understand the full stack — technical, organizational, and institutional.
 
 ---
 
