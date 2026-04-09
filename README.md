@@ -4,10 +4,10 @@
   > **20+ years in software engineering · 7 years as Director of Operations & Pedagogical Director · Now Founder & Architect building institutional-grade systems.**
   
   <p>
-    <a href="https://github.com/sanadidari/qrpruf/actions"><img src="https://img.shields.io/github/actions/workflow/status/sanadidari/qrpruf/ci.yml?label=CI%20QRPruf&style=for-the-badge" alt="CI"></a>
-    <a href="https://github.com/sanadidari/governance-platform/actions"><img src="https://img.shields.io/github/actions/workflow/status/sanadidari/governance-platform/ci.yml?label=CI%20Governance&style=for-the-badge" alt="CI"></a>
+    <img src="https://img.shields.io/badge/Building%20Since-2002-navy?style=for-the-badge&color=0D1F3C" alt="Building Since 2002">
     <img src="https://img.shields.io/badge/Experience-20%2B%20Years-blue?style=for-the-badge" alt="Experience 20+ Years">
     <img src="https://img.shields.io/badge/Ex--Director%20of%20Operations-7%20Years-orange?style=for-the-badge" alt="Ex-Director 7 Years">
+    <img src="https://img.shields.io/badge/Programmer--Analyst-Canada%202002-green?style=for-the-badge" alt="Diploma Canada 2002">
   </p>
 
   <p>
@@ -23,16 +23,16 @@ Most of my prior work was delivered under private enterprise repositories, inter
 
 > **WITI** (Wealth · Institutional · Technical Integrity) is a sovereign digital infrastructure stack engineered for institutional-grade trust, cryptographic proof, and judicial governance.
 
-```text
-┌───────────────────────────┐
-│      WITI Ecosystem       │
-└─────────────┬─────────────┘
-              │
-   ┌──────────┼──────────┐
-   ▼          ▼          ▼
-🛡️ QRPruf  🏛️ Gov. Plat.📱 NOUR Mobile
-(Core)     (Admin)      (Field App)
-Flutter    Laravel      Flutter
+```
+                    WITI Ecosystem
+                         |
+         +---------------+---------------+
+         |               |               |
+    [QRPruf]     [Governance]       [NOUR]
+   Proof Core    Judicial Admin   Field App
+   Flutter/Dart  Laravel/PHP      Flutter
+         |               |               |
+         +-------embedded+---provisions--+
 ```
 
 ### WITI Core Protocols
@@ -107,10 +107,6 @@ Architecture       │ Clean Architecture, Feature-Driven Design, Zero-Trust
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanadidari&layout=compact&theme=dark&hide_border=true" alt="Top Languages" width="45%">
 </div>
-
----
-
-
 
 ---
 
