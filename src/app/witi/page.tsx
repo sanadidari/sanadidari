@@ -229,7 +229,7 @@ export default function WitiHubPage() {
                 <div className={`absolute top-0 left-1/4 w-[800px] h-[400px] rounded-full blur-[160px] ${isDark ? "bg-[var(--accent-primary)]/5" : "bg-[var(--accent-primary)]/8"}`} />
             </div>
 
-            <div className="relative z-10" style={{ maxWidth: '860px', margin: '0 auto', padding: '4.5rem 2rem 3rem' }}>
+            <div className="relative z-10" style={{ maxWidth: '860px', margin: '0 auto', padding: '1.5rem 1rem 3rem' }}>
 
                 {/* Back */}
                 <motion.a
