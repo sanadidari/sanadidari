@@ -65,11 +65,11 @@ Five production-grade Google Apps Script add-ons with AI-powered workflows.
 
 | Add-on | Category | AI Model | Platform |
 |---|---|---|---|
-| ⚡ **AutoScript AI** | Spreadsheet automation & code generation | Gemini 2.5 | Google Sheets |
-| 📋 **FlashBoard AI** | Instant AI dashboard generation from raw data | Gemini 2.5 | Google Sheets |
-| 📧 **MailFlow AI** | AI email composition & communication director | Gemini 2.5 | Gmail Add-on |
-| 🔍 **Sheet Radar AI** | Anomaly detection & data quality monitoring | Gemini 2.5 | Google Sheets |
-| 📌 **SmartPaste AI** | Intelligent copy-paste with data transmutation | Gemini 2.5 | Google Sheets |
+| ⚡ **[AutoScript AI](https://github.com/sanadidari/autoscript)** | Spreadsheet automation & code generation | Gemini 2.5 | Google Sheets |
+| 📋 **[FlashBoard AI](https://github.com/sanadidari/flashboard)** | Instant AI dashboard generation from raw data | Gemini 2.5 | Google Sheets |
+| 📧 **[MailFlow AI](https://github.com/sanadidari/mailflow)** | AI email composition & communication director | Gemini 2.5 | Gmail Add-on |
+| 🔍 **[Sheet Radar AI](https://github.com/sanadidari/sheetradar)** | Anomaly detection & data quality monitoring | Gemini 2.5 | Google Sheets |
+| 📌 **[SmartPaste AI](https://github.com/sanadidari/smartpaste)** | Intelligent copy-paste with data transmutation | Gemini 2.5 | Google Sheets |
 
 ---
 
