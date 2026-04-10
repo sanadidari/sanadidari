@@ -16,7 +16,16 @@
   </p>
 </div>
 
-Most of my prior work was delivered under private enterprise repositories, internal platforms, and client-owned codebases. I currently operate as an independent Principal Consultant through my structure, Sanadidari, where I architect high-trust, institutional-grade systems and open-source protocols. 
+---
+
+## 🚀 Professional Impact & Key Metrics
+
+> **Delivering high-performance, institutional-grade solutions with a focus on trust and scalability.**
+
+- **🚀 40% Reduction in TTM:** Achieved through the WITI modular architecture and specialized Flutter feature-driven Design (FDD).
+- **🛡️ Judicial Scrutiny:** Architected Morocco's first peer-to-peer judicial proof protocol (QRPruf), surviving rigorous institutional security audits.
+- **📊 73 Courts Integrated:** Orchestrated the RBAC and data synchronization for the National Bailiff Governance Platform.
+- **⚡ 20+ AI Workflows:** Automated complex product photography and creative direction for high-volume Shopify & Wix merchants.
 
 *I bring technical leadership, zero-trust security expertise, and modern Flutter/Node stacks to demanding enterprise clients.*
 
@@ -102,9 +111,14 @@ Active contributor to established OSS projects via bounty programs (Opire · Pol
 - **Security & Systems:** Zero-Trust implementation, On-device cryptography (AES/SHA-256), Hardware biometric vaults.
 
 ### 🔧 Full-Stack & Integration Capabilities (Breadth)
-- **Backend & APIs:** Laravel (PHP 8+), Node.js, Next.js 15, Sanctum, RESTful design.
-- **AI Integration:** Google Gemini API, Replicate (SDXL, Flux), ML Kit (Vision/Document scanning).
-- **Cloud & DevOps:** GitHub Actions CI/CD pipelines, Docker, Supabase, Vercel, Coolify.
+- **Backend & APIs:** Laravel 12 (PHP 8.4), Node.js, Next.js 15, Filament 3, Sanctum, JWT, RESTful.
+- **AI Integration:** Google Gemini 2.5, Replicate (SDXL, Flux, Video), ML Kit (Vision/Document scanning).
+- **Cloud & DevOps:** GitHub Actions CI/CD (fixed & optimized), Docker, Supabase, Coolify, DigitalOcean.
+
+### 🏛️ Strategic Leadership & Mentorship
+- **Technical Strategy:** Expertise in choosing "boring technology" for stability vs. "cutting-edge" for growth.
+- **Engineering Excellence:** Implementing TDD, automated CI/CD pipelines, and rigorous architectural documentation (ARCHITECTURE.md).
+- **Mentorship:** Experience leading remote teams and junior developers via peer-reviews and standardizing engineering protocols.
 
 ---
 
