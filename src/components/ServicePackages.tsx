@@ -142,30 +142,30 @@ export default function ServicePackages() {
   }[lang];
 
   return (
-    <section className={`py-24 relative overflow-hidden transition-colors duration-1000 ${theme === 'light' ? 'bg-[#EEE3DF]' : 'bg-[#050505]'}`} id="services-pricing">
+    <section className={`py-40 relative overflow-hidden transition-colors duration-1000 ${theme === 'light' ? 'bg-[#EEE3DF]' : 'bg-[#050505]'}`} id="services-pricing">
       {/* Background Orbs */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--accent-primary)]/5 blur-[120px] rounded-full" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-10 relative z-10 flex flex-col items-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-24"
         >
-          <h2 className="text-4xl lg:text-6xl font-black text-[var(--text-primary)] mb-6 uppercase tracking-tight">
+          <h2 className="text-5xl lg:text-7xl font-black text-[var(--text-primary)] mb-8 uppercase tracking-tight leading-none">
             {t.title}
           </h2>
-          <p className="text-xl text-[var(--text-primary)]/60 max-w-2xl mx-auto font-medium">
+          <p className="text-xl lg:text-2xl text-[var(--text-primary)]/60 max-w-3xl mx-auto font-medium leading-relaxed">
             {t.sub}
           </p>
-          <div className="w-24 h-1 bg-[var(--accent-primary)] mx-auto mt-8 rounded-full" />
+          <div className="w-32 h-1 bg-[var(--accent-primary)] mx-auto mt-10 rounded-full" />
         </motion.div>
 
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch ${dir === "rtl" ? "md:flex-row-reverse" : ""}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 w-full items-stretch ${dir === "rtl" ? "md:flex-row-reverse" : ""}`}>
           {packages.map((pkg, idx) => (
             <motion.div
               key={pkg.id}
@@ -173,11 +173,11 @@ export default function ServicePackages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              whileHover={{ y: -10 }}
-              className={`relative p-8 rounded-[2.5rem] border ${pkg.featured ? 'border-[var(--accent-primary)]' : 'border-[var(--text-primary)]/10'} bg-[var(--bg-primary)]/40 backdrop-blur-3xl flex flex-col h-full group transition-all duration-500 hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)]`}
+              whileHover={{ y: -15 }}
+              className={`relative p-10 lg:p-12 rounded-[3rem] border ${pkg.featured ? 'border-[var(--accent-primary)] shadow-[0_0_40px_rgba(212,175,55,0.1)]' : 'border-[var(--text-primary)]/10'} bg-[var(--bg-primary)]/40 backdrop-blur-3xl flex flex-col h-full group transition-all duration-500 hover:shadow-[0_40px_80px_rgba(212,175,55,0.2)]`}
             >
               {pkg.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--accent-primary)] text-black text-[0.7rem] font-black uppercase px-6 py-1.5 rounded-full tracking-[0.2em] shadow-lg">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[var(--accent-primary)] text-black text-[0.75rem] font-black uppercase px-8 py-2 rounded-full tracking-[0.25em] shadow-2xl z-20 whitespace-nowrap">
                   Most Popular
                 </div>
               )}
