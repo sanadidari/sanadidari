@@ -123,19 +123,19 @@ export default function ServicePackages() {
   const t = {
     fr: {
       title: "Nos Packs d'Expertise",
-      sub: "Des solutions architecturées pour la pérennité de vos projets.",
+      sub: "Des solutions architecturées pour la pérennité \n de vos projets.",
       cta: "Choisir ce pack",
       duration: "Durée estimée :",
     },
     en: {
       title: "Expertise Packages",
-      sub: "Architected solutions for the longevity of your projects.",
+      sub: "Architected solutions for the longevity \n of your projects.",
       cta: "Choose this pack",
       duration: "Estimated duration:",
     },
     ar: {
       title: "باقات الخبرة",
-      sub: "حلول مهيكلة لضمان استدامة مشاريعكم.",
+      sub: "حلول مهيكلة لضمان استدامة \n مشاريعكم.",
       cta: "اختر هذه الباقة",
       duration: "المدة التقديرية:",
     }
@@ -159,10 +159,10 @@ export default function ServicePackages() {
           <h2 className="text-5xl lg:text-7xl font-black text-[var(--text-primary)] mb-8 uppercase tracking-tight leading-none">
             {t.title}
           </h2>
-          <p className="text-xl lg:text-2xl text-[var(--text-primary)]/60 max-w-4xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl lg:text-2xl text-[var(--text-primary)]/60 max-w-4xl mx-auto font-medium leading-relaxed mb-12 whitespace-pre-line">
             {t.sub}
           </p>
-          <div className="w-32 h-1 bg-[var(--accent-primary)] mx-auto mt-10 rounded-full" />
+          <div className="w-32 h-1 bg-[var(--accent-primary)] mx-auto rounded-full" />
         </motion.div>
 
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 w-full items-stretch mt-20 ${dir === "rtl" ? "md:flex-row-reverse" : ""}`}>
