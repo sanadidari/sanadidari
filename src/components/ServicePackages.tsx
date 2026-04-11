@@ -142,30 +142,30 @@ export default function ServicePackages() {
   }[lang];
 
   return (
-    <section className={`py-40 relative overflow-hidden transition-colors duration-1000 ${theme === 'light' ? 'bg-[#EEE3DF]' : 'bg-[#050505]'}`} id="services-pricing">
+    <section className={`py-60 relative overflow-hidden transition-colors duration-1000 z-10 ${theme === 'light' ? 'bg-[#EEE3DF]' : 'bg-[#050505]'}`} id="services-pricing">
       {/* Background Orbs */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--accent-primary)]/5 blur-[120px] rounded-full" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-10 relative z-10 flex flex-col items-center">
+      <div className="max-w-7xl mx-auto px-10 relative z-20 flex flex-col items-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-24"
+          className="text-center mb-32"
         >
           <h2 className="text-5xl lg:text-7xl font-black text-[var(--text-primary)] mb-8 uppercase tracking-tight leading-none">
             {t.title}
           </h2>
-          <p className="text-xl lg:text-2xl text-[var(--text-primary)]/60 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl lg:text-2xl text-[var(--text-primary)]/60 max-w-4xl mx-auto font-medium leading-relaxed">
             {t.sub}
           </p>
           <div className="w-32 h-1 bg-[var(--accent-primary)] mx-auto mt-10 rounded-full" />
         </motion.div>
 
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 w-full items-stretch ${dir === "rtl" ? "md:flex-row-reverse" : ""}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 w-full items-stretch mt-20 ${dir === "rtl" ? "md:flex-row-reverse" : ""}`}>
           {packages.map((pkg, idx) => (
             <motion.div
               key={pkg.id}
