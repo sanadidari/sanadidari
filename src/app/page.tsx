@@ -7,6 +7,7 @@ import { usePremium } from "@/context/PremiumContext";
 import ExpandableDeck from "@/components/ExpandableDeck";
 import ParallaxCarousel from "@/components/ParallaxCarousel";
 import LiquidSlider from "@/components/LiquidSlider";
+import ServicePackages from "@/components/ServicePackages";
 
 const MegaMenuImageCard = ({ item, lang }: { item: any; lang: 'ar' | 'fr' | 'en' }) => {
   const mouseX = useMotionValue(0);
@@ -646,6 +647,9 @@ export default function Home() {
             </div >
           </div >
         </section >
+        
+        {/* SECTION 2: SERVICE PACKAGES (NEW) */}
+        <ServicePackages />
 
         {/* SECTION 3: SLIDER (NEW) */}
         <section className="relative transition-colors duration-700 bg-[#000000]" style={{ padding: '40px 0' }}>
